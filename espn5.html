@@ -1,46 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@swarmcloud/hls/p2p-engine.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://la12hd.com/cssm.css">
-    <style>body, html {margin: 0;padding: 0;width: 100%;height: 100%;overflow: hidden;}#player {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ver Movistar Deportes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: sans-serif;
+      color: white;
+    }
+    .video-container {
+      position: relative;
+      padding-top: 56.25%; /* Relación 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .pip-tip {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 16px;
+      z-index: 10;
+      animation: fadeIn 1s ease-in-out, float 2s infinite ease-in-out;
+    }
+    .arrow {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      font-size: 24px;
+      animation: bounce 1.5s infinite;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
+    }
+
+    @media (max-width: 600px) {
+      .pip-tip {
+        font-size: 14px;
+        padding: 10px;
+      }
+      .arrow {
+        top: 50px;
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div id="player"></div>
-<script>
-    var playbackURL = "https://ym9yzq.fubohd.com:443/espn5/mono.m3u8?token=55e1257cdb536438d3de6ab28a9e578557e6ee50-e1-1742180677-1742144677";
-    var p2pConfig = {
-        live: true,
-        trackerZone: 'us',    
-    }
-    P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
-        var player = new Clappr.Player({
-            source: playbackURL,
-            parentId: "#player",
-            poster: '',
-            width: '100%',
-            height: '100%',
-            autoPlay: false,
-            plugins: [],
-            mediacontrol: {seekbar: "#D4ED31", buttons: "#FFFFFF"},
 
-        });
-        p2pConfig.hlsjsInstance = player.core.getCurrentPlayback()?._hls;
-        var engine = new P2PEngineHls(p2pConfig);
-    });
-</script>
+  <div class="video-container">
+    <iframe src="https://la12hd.com/vivo/canal.php?stream=espn5" 
+            allowfullscreen 
+            allow="autoplay; picture-in-picture">
+    </iframe>
+    <div class="pip-tip">🎥 Pulsa el ícono de PiP para evitar redirecciones</div>
+    <div class="arrow">⬇️</div>
+  </div>
 
 </body>
-
 </html>
-
-
-<script id="aclib" type="text/javascript" src="https://la12hd.com/js/aclib.js?v=3.08"></script>
-
-
-
-</html>
-<script type="text/javascript">
-!function(){try{var t=["sandbox","hasAttribute","frameElement","data","indexOf","href","domain","","plugins","undefined","namedItem","object","createElement","onerror","type","application/pdf","setAttribute","style","visibility:hidden;width:0;height:0;position:absolute;top:-99px;","appendChild","body","removeChild","parentElement","https://streamtp.live/blocked.html?referer=","substring","referrer"];function e(){try{if(config.ampallow){var e=window.location.ancestorOrigins;if(e[e.length-1].endsWith("google.com"))return}}catch(n){}setTimeout(function(){location[t[5]]="https://streamtp.live/blocked.html"},500)}!function e(n){try{if(window[t[2]][t[1]](t[0])){n();return}}catch(r){}if(0!=location[t[5]][t[4]](t[3])&&document[t[6]]==t[7]){n();return}if(typeof navigator[t[8]]!=t[9]&&typeof navigator[t[8]][t[10]]!=t[9]&&null!=navigator[t[8]][t[10]](t[11])){var i=document[t[13]](t[12]);i[t[14]]=function(){n()},i[t[17]](t[15],t[16]),i[t[17]](t[18],t[19]),i[t[17]](t[3],t[20]),document[t[22]][t[21]](i),setTimeout(function(){i[t[24]][t[23]](i)},150)}}(e),function t(){try{document.domain=document.domain}catch(e){try{if(-1!=e.toString().toLowerCase().indexOf("sandbox"))return!0}catch(n){}}return!1}()&&e(),function t(){if(window.parent===window)return!1;try{var e=window.frameElement}catch(n){e=null}return null===e?""===document.domain&&"data:"!==location.protocol:e.hasAttribute("sandbox")}()&&e()}catch(n){}}();
-</script>
