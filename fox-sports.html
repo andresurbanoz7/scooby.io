@@ -2,87 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ver Movistar Deportes</title>
+  <title>Embed Fox-Sports</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Luxon -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"></script>
+  
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      font-family: sans-serif;
-      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
     }
-    .video-container {
-      position: relative;
-      padding-top: 56.25%; /* Relación 16:9 */
-      height: 0;
-      overflow: hidden;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    iframe {
+      margin-top: 20px;
       border: none;
-    }
-    .pip-tip {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.75);
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-size: 16px;
-      z-index: 10;
-      animation: fadeIn 1s ease-in-out, float 2s infinite ease-in-out;
-    }
-    .arrow {
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      font-size: 24px;
-      animation: bounce 1.5s infinite;
-      z-index: 10;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-8px); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-4px); }
-    }
-
-    @media (max-width: 600px) {
-      .pip-tip {
-        font-size: 14px;
-        padding: 10px;
-      }
-      .arrow {
-        top: 50px;
-        font-size: 20px;
-      }
     }
   </style>
 </head>
 <body>
-
-  <div class="video-container">
-    <iframe src="https://la12hd.com/vivo/canal.php?stream=foxsports" 
-            allowfullscreen 
-            allow="autoplay; picture-in-picture">
-    </iframe>
-    <div class="pip-tip">🎥 Pulsa el ícono de PiP para evitar redirecciones</div>
-    <div class="arrow">⬇️</div>
-  </div>
-
+  <h1>Canal Fox-sports</h1>
+  <button id="btnIframe">Recargar página</button>
+  <br>
+  <iframe id="embedIframe" width="800" height="600" allowfullscreen></iframe>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Recargar la página al hacer clic en el botón
+      document.getElementById("btnIframe").addEventListener("click", function () {
+        window.location.reload();
+      });
+  
+      const url = new URL(window.location.href);
+      const queryStrings = url.searchParams;
+      const r = queryStrings.get("r");
+  
+      if (r && r.length > 0) {
+        // Decodifica el parámetro 'r' en Base64 y lo utiliza como URL para el iframe
+        const decodedString = atob(r);
+        document.getElementById("embedIframe").setAttribute("src", decodedString);
+      } else {
+        // Si no se pasa el parámetro, se establece el enlace por defecto
+        const defaultURL = "htttps://la12hd.com/vivo/canal.php?stream=foxsports";
+        document.getElementById("embedIframe").setAttribute("src", defaultURL);
+      }
+    });
+  </script>
 </body>
 </html>
