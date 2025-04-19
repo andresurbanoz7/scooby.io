@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Activar y Ver Teleclub</title>
+</head>
+<body>
+  <h1>Activa y Disfruta </h1>
+  <p> haz clic en el botón para activar los canales:</p>
+  <button id="activar" onclick="activar()">Activar Teleclub</button>
+  <p id="status"></p>
+
+  <script>
+    function activar() {
+      const nuevaVentana = window.open('https://tv.teleclub.xyz/activar', '_blank');
+      document.getElementById("status").innerText = "Esperando activación...";
+
+      setTimeout(() => {
+        window.location.href = "http://tv.teleclub.xyz/tv/lista.m3u";
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
