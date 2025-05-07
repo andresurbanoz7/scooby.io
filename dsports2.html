@@ -1,53 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Embed Dsports2</title>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
-  <!-- Luxon -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"></script>
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    iframe {
-      margin-top: 20px;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>Canal Dsports2</h1>
-  <button id="btnIframe">Recargar página</button>
-  <br>
-  <iframe id="embedIframe" width="800" height="600" allowfullscreen></iframe>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Recargar la página al hacer clic en el botón
-      document.getElementById("btnIframe").addEventListener("click", function () {
-        window.location.reload();
-      });
-  
-      const url = new URL(window.location.href);
-      const queryStrings = url.searchParams;
-      const r = queryStrings.get("r");
-  
-      if (r && r.length > 0) {
-        // Decodifica el parámetro 'r' en Base64 y lo utiliza como URL para el iframe
-        const decodedString = atob(r);
-        document.getElementById("embedIframe").setAttribute("src", decodedString);
-      } else {
-        // Si no se pasa el parámetro, se establece el enlace por defecto
-        const defaultURL = "https://la12hd.com/vivo/canal.php?stream=dsports2";
-        document.getElementById("embedIframe").setAttribute("src", defaultURL);
-      }
-    });
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",Jo=[],_s="qkg";
+Jo=[[50,"SW81NzU1NDdOaQ=="],[152,"Qko1NzU0ODFVSw=="],[137,"cWY1NzU0ODlFUQ=="],[121,"S1k1NzU0ODlHeQ=="],[5,"TXQ1NzU0OTNMRw=="],[108,"VkE1NzU1MzV0Sg=="],[0,"UlA1NzU1MzloSQ=="],[149,"bEI1NzU0ODF1eg=="],[105,"UnU1NzU1MzN3ZQ=="],[33,"S2Y1NzU1MzRBZQ=="],[116,"RVg1NzU0ODZ0Zg=="],[82,"WlY1NzU1MzJObA=="],[114,"cEc1NzU0ODBNdQ=="],[89,"UU01NzU0OTFNRA=="],[65,"c3E1NzU1NTJRUg=="],[29,"VUQ1NzU1MzZ5cA=="],[74,"WGs1NzU0ODVnYw=="],[126,"dlE1NzU0ODlBTA=="],[142,"REc1NzU0OTZ6Vg=="],[52,"THo1NzU1NDlZZA=="],[129,"T0w1NzU0ODRrRQ=="],[148,"cFU1NzU0ODNUTg=="],[19,"Z0k1NzU1NTBLYg=="],[132,"enY1NzU0ODl5Yw=="],[153,"UWg1NzU0ODdXWQ=="],[34,"VW81NzU1NDZ4TQ=="],[123,"WWo1NzU0ODlidg=="],[130,"WGs1NzU0OTBScg=="],[75,"ZnM1NzU1MzR3Tw=="],[154,"YXA1NzU0ODVrSg=="],[69,"amg1NzU1NDZLUw=="],[15,"d1k1NzU1NDlaag=="],[86,"WXY1NzU0ODVMVA=="],[62,"dXM1NzU0ODFWbA=="],[28,"bmg1NzU1NTNxUQ=="],[90,"SEU1NzU0ODhvaw=="],[49,"aXo1NzU1NTBnVA=="],[118,"eWM1NzU0ODR4Yg=="],[11,"UUs1NzU1NTBzag=="],[143,"bms1NzU0ODRndw=="],[14,"YWs1NzU1MzR3UQ=="],[78,"aWM1NzU1MzRqdA=="],[136,"REs1NzU0ODdBVg=="],[140,"d0k1NzU1NDBpTw=="],[115,"QUU1NzU0ODlYYQ=="],[2,"a1A1NzU1NTFPYw=="],[18,"c2U1NzU1NDJuZw=="],[104,"dW41NzU0OTBGdQ=="],[56,"ak81NzU0ODJjag=="],[57,"SVQ1NzU1NDBIUg=="],[150,"d1o1NzU0ODlHZA=="],[31,"QWI1NzU1MzVzQg=="],[1,"T1o1NzU1NTFsbw=="],[53,"Wnc1NzU1NTF3Tg=="],[110,"SG01NzU0ODNxdg=="],[10,"dUs1NzU1NDB2Yw=="],[42,"bXM1NzU1NDNZdg=="],[66,"elY1NzU0OTF3RQ=="],[99,"Wmk1NzU1MzRGbw=="],[113,"UkM1NzU0OTFxZQ=="],[35,"bG81NzU1NDRIWA=="],[97,"SGs1NzU1MzdGdw=="],[27,"eGQ1NzU1NDBCTQ=="],[64,"WmY1NzU0ODZHYQ=="],[138,"SmE1NzU0ODNzUg=="],[25,"dEE1NzU1NTBZbw=="],[4,"TWg1NzU1NTBBag=="],[95,"cko1NzU0ODhrbQ=="],[73,"VlY1NzU0OTZ0Qw=="],[124,"ZXY1NzU0ODlPUw=="],[119,"QnI1NzU0OTBBbw=="],[63,"aXI1NzU1NDRySw=="],[102,"VmM1NzU0ODdKZA=="],[22,"TU01NzU1MzZ5Tg=="],[100,"UVQ1NzU0OTFBbw=="],[83,"ZUw1NzU0ODdDaQ=="],[23,"V2I1NzU1MzJuUw=="],[41,"RHQ1NzU1MzhaWQ=="],[44,"bWk1NzU1MzN3Sw=="],[55,"aEQ1NzU0ODVNVQ=="],[45,"TVE1NzU1MzJXVw=="],[16,"ZVQ1NzU1MzJHbA=="],[146,"dlM1NzU0ODFSVA=="],[131,"Rk01NzU0ODdNUA=="],[40,"Qms1NzU0ODJyTg=="],[117,"ckg1NzU0ODBOVQ=="],[101,"dVQ1NzU0ODV3dQ=="],[20,"aGo1NzU1NTFuVQ=="],[147,"ZG81NzU0ODdaWQ=="],[59,"cHI1NzU1MzVBQw=="],[38,"YW01NzU0ODdORw=="],[88,"ZWk1NzU1MzJxRQ=="],[81,"aFo1NzU0OTF6dw=="],[87,"TGU1NzU0ODV2Uw=="],[96,"dVg1NzU0OTBvSQ=="],[91,"dGQ1NzU0OTFsTg=="],[60,"aVk1NzU1MzZWYg=="],[151,"b1A1NzU0ODhxZw=="],[68,"YmI1NzU1NTFHQg=="],[7,"cGU1NzU0ODJ1Ug=="],[107,"U1M1NzU0ODhSVA=="],[8,"cEg1NzU1NDNaWg=="],[36,"T0g1NzU0OTNkVg=="],[76,"UUU1NzU0ODdWbw=="],[106,"U3Q1NzU0ODNVdw=="],[127,"aEo1NzU0ODNIUg=="],[17,"bm81NzU1MzRiWA=="],[120,"Wkc1NzU0ODdXVg=="],[58,"T0k1NzU1NDVCbA=="],[46,"VEM1NzU1NDN3Vg=="],[145,"UlY1NzU0ODlFWg=="],[84,"dlk1NzU0OTFuZw=="],[24,"Uks1NzU1NDRZSg=="],[26,"cEQ1NzU1NDNSdQ=="],[79,"T0Q1NzU0ODVaUA=="],[125,"aHE1NzU0OTFscQ=="],[70,"SFA1NzU1NDJMRg=="],[6,"aUs1NzU0ODJpVg=="],[112,"dVQ1NzU0ODRsWQ=="],[61,"cms1NzU1NTV2RQ=="],[111,"ZmE1NzU1MzZiTA=="],[92,"V1Y1NzU0ODhybw=="],[77,"c1I1NzU1MzNSYg=="],[30,"RlM1NzU1MzlmcQ=="],[103,"QkM1NzU0ODlFbA=="],[98,"aWU1NzU0ODdSdQ=="],[48,"Y1g1NzU1MzV6Qw=="],[85,"R0c1NzU0ODVndQ=="],[32,"ckQ1NzU0ODFXRw=="],[67,"Y0s1NzU0OThZdQ=="],[109,"YVk1NzU1MzRwUA=="],[133,"Rno1NzU0ODlsSQ=="],[12,"SUk1NzU1MzJVQQ=="],[141,"blA1NzU1NDd5bQ=="],[39,"Vm81NzU0ODZDUw=="],[13,"akY1NzU0ODFkUA=="],[37,"QWk1NzU0ODdkdQ=="],[54,"cEw1NzU1NTBubw=="],[134,"UEU1NzU0ODZOTg=="],[72,"dkU1NzU1NDVWRA=="],[21,"R3U1NzU1NDlubQ=="],[80,"cWM1NzU0ODZ3YQ=="],[9,"a3g1NzU1MzJ0ZQ=="],[3,"bmk1NzU1NDdRRA=="],[135,"a3o1NzU0ODdLQQ=="],[51,"aWw1NzU1NDZZZw=="],[122,"QUU1NzU0ODl5bw=="],[144,"aG41NzU0OTF2Tw=="],[43,"WkU1NzU1NDZOVQ=="],[47,"TWY1NzU0ODJscg=="],[139,"RUY1NzU0NzNYSw=="],[93,"V1k1NzU0OTFyTg=="],[94,"TVQ1NzU0OTJXbA=="],[128,"cW41NzU0ODBlaQ=="],[71,"Ym81NzU1MzZJUQ=="]];
+Jo.sort((a,b)=>a[0]-b[0]);
+var k=GyzUz()+dXMxL();
+Jo.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function GyzUz(){return 74004;}
+function dXMxL(){return 501431;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script>
+
+
+</body></html>
