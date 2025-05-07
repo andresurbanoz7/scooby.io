@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reproductor P2P Limpio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    #player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .sound-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background-color: #002cec;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    .sound-button:hover {
+      background-color: #001f4d;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+  <button class="sound-button" id="soundButton" onclick="unmutePlayer()">🔊 Activar sonido</button>
+
+  <script>
+   playbackURL="",iE=[],_s="BpI";
+iE=[[53,"Um01ODgyMDNybA=="],[24,"cnk1ODgyMTNnRQ=="],[147,"ZVI1ODgxNTFpdw=="],[98,"Y3A1ODgxNDdNRg=="],[32,"TUU1ODgxOTdWdA=="],[133,"aUs1ODgxNTBPSQ=="],[65,"aXE1ODgyMDlUYw=="],[101,"ZHY1ODgxNDl2dw=="],[44,"bVM1ODgxOTVWTg=="],[124,"YlM1ODgxNDNjQg=="],[20,"QUc1ODgyMTJhTQ=="],[56,"ZUE1ODgxOTlmSQ=="],[146,"UG81ODgxNTJpeA=="],[84,"Y041ODgxNTBpdg=="],[27,"Ukc1ODgyMTZyYQ=="],[23,"R0w1ODgyMDdkag=="],[54,"R3Y1ODgyMDhJeA=="],[145,"VnM1ODgxNDRqSA=="],[117,"Rmw1ODgxNTJFTA=="],[142,"YXQ1ODgxNDRRRg=="],[17,"Vkg1ODgyMDVOdg=="],[78,"eHA1ODgxOTVCcw=="],[22,"a0k1ODgxOTVvRA=="],[25,"Qmk1ODgyMDZkQw=="],[67,"UXo1ODgxOTl2TA=="],[75,"TVM1ODgxNDlvSQ=="],[73,"QXM1ODgxOTVkZA=="],[120,"dkw1ODgxNTFMcA=="],[123,"b0Y1ODgxNDdibw=="],[122,"ZXA1ODgxNTBsZg=="],[81,"Tmw1ODgxOTZwTw=="],[50,"V1M1ODgyMDhSdw=="],[141,"cVk1ODgxNTJXWA=="],[144,"UHA1ODgxNDZVZw=="],[88,"Uko1ODgxNDdEcw=="],[64,"UUg1ODgyMTR0ag=="],[115,"b3M1ODgxNTNuZA=="],[113,"RHo1ODgxNDNkUQ=="],[15,"YUg1ODgxOTV3aw=="],[114,"Vk01ODgxNDdxTw=="],[69,"aEw1ODgxNTlBQw=="],[103,"SlE1ODgxOThnaQ=="],[29,"eWU1ODgyMDJNbQ=="],[35,"YVA1ODgxNTZySg=="],[38,"VlM1ODgxNDloZQ=="],[71,"Z041ODgxNTBjbA=="],[51,"R0E1ODgxNDhvaA=="],[77,"dVc1ODgxNDlqWA=="],[83,"a3k1ODgxOTlIeQ=="],[49,"YnI1ODgyMTBpTQ=="],[70,"Tmc1ODgxNTRUYg=="],[82,"REc1ODgxNTBCZA=="],[148,"TW81ODgxNDRRSg=="],[76,"TWc1ODgxNTBBbw=="],[136,"bnM1ODgyMDNsTA=="],[7,"aFg1ODgxNDVNdw=="],[138,"dlk1ODgxNTl0Ug=="],[85,"TU41ODgxOTlBcQ=="],[0,"eHY1ODgyMDJiUw=="],[58,"c0c1ODgxNDRiaw=="],[43,"a3o1ODgxOTZhbw=="],[110,"eG41ODgxNDNwbA=="],[8,"T0U1ODgxNDhtYQ=="],[107,"ZU81ODgxNTRnWQ=="],[90,"REk1ODgxNTJZUg=="],[41,"UUo1ODgyMDZBcA=="],[112,"Z0M1ODgxOTZSSQ=="],[21,"UkI1ODgxOTl5Qw=="],[109,"V3c1ODgxNTVtTg=="],[11,"Q0w1ODgxNDdEag=="],[102,"ZWM1ODgxNTNvSg=="],[2,"Vlc1ODgyMTRHZg=="],[42,"Q1I1ODgyMDlrWA=="],[30,"Sm41ODgxOThDVw=="],[74,"U1Y1ODgxNTFFaA=="],[3,"Yks1ODgyMTB2cA=="],[4,"SUE1ODgyMTNQQw=="],[100,"U3Y1ODgxOTlLQw=="],[33,"b0s1ODgyMDlBZA=="],[26,"TmQ1ODgyMDNSYg=="],[137,"cEs1ODgyMTBqbQ=="],[132,"T1Y1ODgxNTRpbg=="],[94,"b0w1ODgxOTVYZw=="],[93,"QXQ1ODgxNTFhaQ=="],[143,"clk1ODgxNTBkaw=="],[19,"amo1ODgyMTRWcg=="],[59,"ZE41ODgyMDdFVg=="],[46,"Vmg1ODgxNDV1bA=="],[66,"ZFE1ODgyMDVERQ=="],[140,"ZHI1ODgxNTRFbg=="],[16,"dU41ODgxOTdHZQ=="],[18,"dnc1ODgyMTNaQw=="],[139,"eWU1ODgxNDdwdQ=="],[68,"UGw1ODgyMDhtSA=="],[61,"dnY1ODgyMTV1UQ=="],[108,"S0M1ODgxNTJZYQ=="],[28,"dnk1ODgxOTlzSg=="],[95,"YnI1ODgxNDduRw=="],[9,"aXY1ODgxNTBweQ=="],[99,"ZmM1ODgxNDlYTw=="],[34,"S2s1ODgyMDdVQw=="],[13,"TEo1ODgxOTdxSw=="],[6,"Tks1ODgxNDVGSg=="],[131,"QmM1ODgxNDhBUQ=="],[55,"VlA1ODgxOTh2dg=="],[135,"R0c1ODgxMzZKZw=="],[57,"T0U1ODgyMThTUg=="],[92,"U001ODgxOTZUcg=="],[72,"SHA1ODgxOTZQYQ=="],[130,"S2E1ODgxNDhiRQ=="],[40,"Q001ODgyMDFscA=="],[126,"dmU1ODgxNTNObw=="],[121,"eGg1ODgxNDh4VA=="],[37,"SXI1ODgxNTBoVA=="],[52,"ZEk1ODgxNDVzVw=="],[10,"T0c1ODgxOTVXSA=="],[80,"SFI1ODgxNTVITA=="],[12,"RXM1ODgxNDRQdg=="],[86,"R2s1ODgxOTdYQQ=="],[45,"VnI1ODgyMDZvRg=="],[150,"d0g1ODgxNDh6dg=="],[5,"dlk1ODgxNTZOSQ=="],[125,"clE1ODgxNDdrYg=="],[31,"RnQ1ODgxNDR1cQ=="],[60,"bk01ODgxNDl0Yw=="],[105,"Y041ODgxOTlUTw=="],[39,"Q241ODgxNDVvQg=="],[1,"Zm01ODgyMTRYRg=="],[116,"c2Q1ODgxNTBnSg=="],[48,"QnU1ODgyMTNSag=="],[129,"dmM1ODgxNTJZWg=="],[111,"a1M1ODgxNTRxZA=="],[134,"WWo1ODgxNDdvTw=="],[96,"Y2Y1ODgxOTlVVA=="],[149,"ZEY1ODgxNTBNTg=="],[14,"UnU1ODgyMTJUaQ=="],[47,"Rkg1ODgxOTlIUA=="],[36,"SXU1ODgxNTBCTA=="],[62,"aFQ1ODgxNTRVbQ=="],[63,"V001ODgxNjFVVw=="],[119,"YVo1ODgxNTFJYg=="],[128,"S2w1ODgxNTJqbw=="],[87,"SFk1ODgxOTl2Rg=="],[91,"VHM1ODgxNTFDQQ=="],[127,"Rm81ODgxNTBCUw=="],[118,"WEc1ODgxNTJLdA=="],[97,"dlY1ODgyMDB6aQ=="],[104,"WWI1ODgxNDZwdg=="],[106,"b2g1ODgxNTBUUg=="],[79,"aks1ODgxNDZjbQ=="],[89,"SG81ODgxNTNGaQ=="]];
+iE.sort((a,b)=>a[0]-b[0]);
+var k=IpKuw()+lgVfX();
+iE.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function IpKuw(){return 70009;}
+function lgVfX(){return 518089;}
+
+    var k = IpKuw() + lgVfX();
+    iE.forEach(e => {
+      let v = e[1];
+      playbackURL += String.fromCharCode(parseInt(atob(v).replace(/\D/g, '')) - k);
+    });
+
+    var p2pConfig = {
+      trackerZone: 'us',
+      sourceUrl: playbackURL
+    };
+
+    P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
+      var player = new Clappr.Player({
+        source: playbackURL,
+        parentId: "#player",
+        plugins: [SwarmCloudClapprPlugin],
+        width: '100%',
+        height: '100%',
+        autoPlay: false,
+        mute: true,
+        playsinline: true,
+        playback: {
+          hlsjsConfig: {
+            maxBufferSize: 0,
+            maxBufferLength: 12,
+            liveSyncDurationCount: 3,
+            p2pConfig: p2pConfig
+          }
+        }
+      });
+      window.player = player;
+    });
+
+    function unmutePlayer() {
+      if (window.player) {
+        player.setVolume(100);
+        player.configure({ mute: false });
+        document.getElementById('soundButton').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
