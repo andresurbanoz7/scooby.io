@@ -1,53 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Embed Fox-Sports</title>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
-  <!-- Luxon -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"></script>
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    iframe {
-      margin-top: 20px;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>Canal Fox-sports</h1>
-  <button id="btnIframe">Recargar página</button>
-  <br>
-  <iframe id="embedIframe" width="800" height="600" allowfullscreen></iframe>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Recargar la página al hacer clic en el botón
-      document.getElementById("btnIframe").addEventListener("click", function () {
-        window.location.reload();
-      });
-  
-      const url = new URL(window.location.href);
-      const queryStrings = url.searchParams;
-      const r = queryStrings.get("r");
-  
-      if (r && r.length > 0) {
-        // Decodifica el parámetro 'r' en Base64 y lo utiliza como URL para el iframe
-        const decodedString = atob(r);
-        document.getElementById("embedIframe").setAttribute("src", decodedString);
-      } else {
-        // Si no se pasa el parámetro, se establece el enlace por defecto
-        const defaultURL = "https://la12hd.com/vivo/canal.php?stream=foxsports";
-        document.getElementById("embedIframe").setAttribute("src", defaultURL);
-      }
-    });
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",QK=[],_s="SZe";
+QK=[[113,"Snc3Mzc2MTlrSA=="],[125,"VUk3Mzc1NzFteA=="],[94,"SGc3Mzc1NzNCYQ=="],[135,"Wnc3Mzc1NzV2Wg=="],[134,"VUw3Mzc1NzVTeg=="],[31,"Zkg3Mzc2MThodg=="],[64,"c2s3Mzc1NzRLQg=="],[15,"U2o3Mzc2MzJIVw=="],[71,"WWQ3Mzc1Nzl5Uw=="],[93,"Wkg3Mzc1NjlmZQ=="],[100,"U043Mzc2MThjTw=="],[146,"bm03Mzc1NjZOUw=="],[95,"cFA3Mzc2MTZFaQ=="],[46,"b0w3Mzc2MjZDUQ=="],[7,"Y3I3Mzc1NjVQTg=="],[101,"VVQ3Mzc1NzRLSA=="],[5,"elA3Mzc1NzZqaw=="],[108,"c2I3Mzc2MTZHaQ=="],[65,"U0g3Mzc1ODFuTg=="],[54,"dXU3Mzc1NjVleg=="],[149,"QnE3Mzc1NzFEQg=="],[104,"bEw3Mzc1NzRXTw=="],[39,"Q0k3Mzc1NjllVg=="],[32,"UGI3Mzc1NjR4aw=="],[68,"QkY3Mzc2MjVGSg=="],[3,"WmQ3Mzc2MzBNTw=="],[77,"bGc3Mzc2MTd5dQ=="],[102,"WWQ3Mzc1NzFuSg=="],[63,"RFY3Mzc2MzVSWQ=="],[131,"SkU3Mzc1NzJnRg=="],[96,"eW43Mzc1NjhsSw=="],[114,"SGg3Mzc1NzJSeA=="],[22,"Z243Mzc2MTl0dQ=="],[82,"bnU3Mzc2MThxZw=="],[11,"Sm43Mzc2MjNycQ=="],[91,"Y1o3Mzc1NzF4UA=="],[136,"Tno3Mzc1NzFZSA=="],[34,"Z3k3Mzc2MjlIQQ=="],[14,"RW83Mzc2MTdvQw=="],[133,"ckE3Mzc1NzBrSg=="],[151,"VG83Mzc1NzBNSA=="],[62,"SUM3Mzc1NjlyUA=="],[58,"VGk3Mzc2MTlCdA=="],[53,"eGw3Mzc2MzJUcg=="],[75,"V2w3Mzc1NzBYRA=="],[143,"clk3Mzc1NzJncQ=="],[142,"UnI3Mzc1NzR6bA=="],[148,"WVA3Mzc1NzJMZA=="],[118,"WXc3Mzc1NzBDRA=="],[16,"RHQ3Mzc2MTVtWQ=="],[86,"clQ3Mzc1NzFocA=="],[78,"ZE83Mzc1NzFTSA=="],[43,"bFg3Mzc2MjlFeA=="],[147,"RXI3Mzc1NjR5RA=="],[144,"R0U3Mzc1NjRpSQ=="],[126,"T043Mzc1NjNGTA=="],[107,"Ukc3Mzc2MjB3SQ=="],[80,"VGU3Mzc1NzR6Tw=="],[112,"RGo3Mzc1NjNpbQ=="],[99,"eE43Mzc2MjBKQw=="],[50,"S2E3Mzc2MzhKVw=="],[70,"bmY3Mzc2MjhWQw=="],[130,"Y283Mzc1NzJTdg=="],[111,"Qnc3Mzc2MjBkUQ=="],[84,"UHM3Mzc1NjlwWQ=="],[47,"SUU3Mzc1NjVVeA=="],[138,"VUo3Mzc2MjNqTg=="],[110,"VXQ3Mzc2MThLVg=="],[87,"U1Y3Mzc1NzNWaQ=="],[73,"SHc3Mzc2MThVQg=="],[52,"Yks3Mzc2MTVxdQ=="],[48,"RnQ3Mzc2MjBsbQ=="],[24,"Znc3Mzc2MjdwZA=="],[61,"bHc3Mzc2MjdTVg=="],[117,"VEY3Mzc1NzNESQ=="],[20,"ZUM3Mzc2MzRQdw=="],[106,"VlI3Mzc2MThBbg=="],[88,"eEE3Mzc2MTZOcw=="],[127,"eEk3Mzc1NjdxeQ=="],[0,"S0U3Mzc2MjJQZg=="],[140,"WEw3Mzc1NzlLVg=="],[137,"aWc3Mzc1NTZTaA=="],[124,"dHA3Mzc1NzVrbg=="],[35,"Y1U3Mzc2MjdUWA=="],[45,"eEI3Mzc2MTVNcw=="],[56,"ZmY3Mzc2MjhQQQ=="],[51,"aXg3Mzc1Njd3dw=="],[120,"Zm03Mzc1NzJDbw=="],[139,"alg3Mzc2MzBkRA=="],[97,"dHo3Mzc1NzB6dw=="],[8,"b2o3Mzc2MzNWSA=="],[145,"WUE3Mzc1NzBDWA=="],[72,"a3I3Mzc1NzNYTw=="],[90,"bWo3Mzc1NzB5VA=="],[59,"c0I3Mzc2MzhWbQ=="],[89,"eUQ3Mzc1NzR3dw=="],[57,"a3M3Mzc2MThYZw=="],[66,"cEY3Mzc2MzRKVA=="],[13,"bGE3Mzc1NjROaA=="],[38,"VW03Mzc1NzBabA=="],[103,"VWM3Mzc2MjBVbQ=="],[23,"Uko3Mzc2MTV2cQ=="],[121,"Q2s3Mzc1NzJWTQ=="],[69,"eWQ3Mzc2MTl2Qg=="],[115,"U0I3Mzc1NjNVWA=="],[49,"TVg3Mzc2MjlLSg=="],[40,"bng3Mzc1NjVXTg=="],[141,"SlE3Mzc1NjdwVw=="],[27,"eUE3Mzc2MjNtdw=="],[9,"Y0o3Mzc2Mjl3cg=="],[2,"Qnk3Mzc2MzRCSg=="],[83,"THM3Mzc2MTh1Zg=="],[119,"c3c3Mzc1NzJkdQ=="],[26,"TWY3Mzc2MjZHWg=="],[81,"eE03Mzc2MTVJVg=="],[30,"S2k3Mzc2MjJDbA=="],[150,"SG83Mzc1NjRwaw=="],[6,"bkU3Mzc1NjVEUQ=="],[60,"dlE3Mzc1NjRldQ=="],[1,"dGk3Mzc2MzRKRQ=="],[19,"dlU3Mzc2MzN0dg=="],[12,"elY3Mzc2MjlBRg=="],[10,"RE83Mzc2MTdESw=="],[29,"VFk3Mzc2MTlqdw=="],[98,"VEY3Mzc2MTdFTA=="],[37,"UmY3Mzc1NzBjSQ=="],[36,"RmE3Mzc1NzZ3bQ=="],[109,"UGc3Mzc1NjZkQw=="],[79,"Qno3Mzc2MjBEbg=="],[4,"dUM3Mzc2MzNGdw=="],[55,"ZW83Mzc2MjNYdg=="],[105,"b0I3Mzc1NjZZbg=="],[25,"VFY3Mzc2MzNHdw=="],[21,"aUc3Mzc2MzJVbw=="],[116,"SUk3Mzc1NjdOQg=="],[123,"cFE3Mzc1NjllQg=="],[132,"U0o3Mzc1Njl5TA=="],[129,"Skg3Mzc1NzBndA=="],[152,"YUY3Mzc1NjhFSQ=="],[85,"ZHY3Mzc2MjBsTQ=="],[76,"VVY3Mzc1NzVvdA=="],[33,"bUs3Mzc2MTd0cg=="],[67,"Z1I3Mzc2MjlWVQ=="],[44,"aWQ3Mzc2MTZGbQ=="],[17,"b203Mzc2MTdlaA=="],[42,"Tlg3Mzc2MjZDVg=="],[92,"c2M3Mzc2MTVFRw=="],[122,"RGo3Mzc1NzN5UA=="],[41,"ZlM3Mzc2MjFkbw=="],[128,"eU43Mzc1NzNpcg=="],[18,"U1E3Mzc2MjV0VA=="],[28,"eUM3Mzc2MzZiaw=="],[74,"Y2c3Mzc2MTV2aA=="]];
+QK.sort((a,b)=>a[0]-b[0]);
+var k=cYweX()+FLxWR();
+QK.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function cYweX(){return 68789;}
+function FLxWR(){return 668729;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script>
+
+</body></html>
