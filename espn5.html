@@ -1,44 +1,33 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Reproductor Resistente</title>
+  <title>Reproductor con Recarga Automática</title>
   <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script>
   <style>
-    body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: black; }
-    #player { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: black; }
+    #player { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
   </style>
 </head>
 <body>
   <div id="player"></div>
   <script>
-    // Aquí pega el arreglo iN actualizado del HTML de hoy
-    var iN = [ [81,"Z003OTU3MjdDcw=="],[88,"R0w3OTU3MjlGVQ=="],[3,"eWw3OTU3ODdFUg=="],[85,"bHQ3OTU3MzJpQg=="],[6,"eWc3OTU3MjJRQw=="],[130,"VE43OTU3MjRvdg=="],[92,"UFg3OTU3MjRmTQ=="],[144,"bmE3OTU3MjVJcg=="],[120,"WUE3OTU3MjZudA=="],[17,"dlc3OTU3ODJLeA=="],[104,"bnE3OTU3MjNHVw=="],[86,"UUk3OTU3MjRQbQ=="],[10,"dmM3OTU3NzJvTA=="],[26,"QVo3OTU3ODBNeQ=="],[123,"Z3E3OTU3MjV0ag=="],[67,"WVM3OTU3NzZVSA=="],[138,"U2o3OTU3MzZacg=="],[151,"VnM3OTU3MjR1Yg=="],[89,"Wlk3OTU3Nzdjag=="],[95,"bEE3OTU3MjZCUQ=="],[93,"R2Q3OTU3NzJTZw=="],[99,"UnU3OTU3MjlLdw=="],[25,"Tk83OTU3ODNYUw=="],[54,"Vmo3OTU3ODV2ZQ=="],[51,"WlI3OTU3MjhaUw=="],[7,"Ukg3OTU3MjJOTg=="],[47,"ZXE3OTU3NzZ3WQ=="],[133,"ang3OTU3MjdTeA=="],[103,"TnQ3OTU3MzBjYQ=="],[65,"Tko3OTU3ODZNZw=="],[124,"dVk3OTU3MjBMVQ=="],[126,"UFE3OTU3MzBheQ=="],[41,"cVk3OTU3ODNiRg=="],[0,"elk3OTU3NzlIRw=="],[36,"Y083OTU3MjdkaQ=="],[58,"eWU3OTU3MjFDcQ=="],[84,"ek43OTU3MjZzZA=="],[105,"bW43OTU3NzZLeQ=="],[122,"VEg3OTU3MjdnQw=="],[69,"SFE3OTU3MzZudQ=="],[57,"eXQ3OTU3OTVzRw=="],[40,"YUM3OTU3Nzh4Vw=="],[13,"TGQ3OTU3NzRoRw=="],[129,"amY3OTU3MzBXVA=="],[70,"alo3OTU3NzRUaA=="],[98,"THg3OTU3MzBzdg=="],[97,"WWM3OTU3MzJtVA=="],[78,"VmQ3OTU3NzV4bw=="],[132,"THc3OTU3MjZFZA=="],[62,"U283OTU3MzFOTg=="],[143,"dUk3OTU3MjRobw=="],[48,"VGM3OTU3OTBwRw=="],[2,"eEw3OTU3OTFhRg=="],[94,"R1k3OTU3MzFuZw=="],[142,"TXU3OTU3MjFFZg=="],[137,"akE3OTU3ODdacA=="],[43,"RlI3OTU3NzNqUA=="],[34,"V2k3OTU3ODREeQ=="],[52,"ZHI3OTU3MjJvZg=="],[102,"WWQ3OTU3MjZqVA=="],[21,"TFM3OTU3NzZ6VQ=="],[118,"WGU3OTU3MzBGSA=="],[27,"UWE3OTU3OTNaQQ=="],[148,"SGc3OTU3Mjdraw=="],[87,"dkY3OTU3MjVJUg=="],[42,"cHY3OTU3ODZjZQ=="],[30,"Tmo3OTU3NzVYZw=="],[31,"UG03OTU3MjFsUg=="],[74,"bHo3OTU3NzNFcQ=="],[53,"dUk3OTU3ODBIZg=="],[109,"WmY3OTU3MjNPZQ=="],[55,"SFc3OTU3NzV0Yw=="],[128,"TXk3OTU3Mjl0UQ=="],[79,"amk3OTU3MzJ5QQ=="],[5,"U1Y3OTU3MzNHcQ=="],[77,"eGk3OTU3MjdjWA=="],[32,"RmY3OTU3NzRTRg=="],[134,"dGM3OTU3MjVuaw=="],[60,"d3Y3OTU3MjZyeQ=="],[90,"VW03OTU3NzZBWA=="],[61,"cFU3OTU3OTJhaA=="],[39,"T2c3OTU3MjJlRg=="],[9,"RE03OTU3MjRJeA=="],[96,"cmQ3OTU3MjlvSA=="],[112,"d1M3OTU3NzdwdQ=="],[49,"V243OTU3ODd3SQ=="],[75,"Z0o3OTU3NzNKZg=="],[35,"Y3k3OTU3MzNBTQ=="],[140,"QXE3OTU3MzJNdw=="],[56,"UW83OTU3NzZXSw=="],[66,"SlA3OTU3ODJoTw=="],[113,"b3E3OTU3MjBkdQ=="],[15,"YU03OTU3NzJ6dA=="],[135,"b0o3OTU3MTNtaQ=="],[8,"VEY3OTU3MjhMeQ=="],[147,"ZEI3OTU3MjVrUQ=="],[125,"cnI3OTU3MjRNSQ=="],[24,"ZUE3OTU3OTBjZQ=="],[63,"SkM3OTU3MzhMeQ=="],[22,"bVI3OTU3NzJBRA=="],[29,"T1M3OTU3NzlzdQ=="],[50,"RGQ3OTU3ODV4Qg=="],[64,"Y1A3OTU3OTFJcA=="],[44,"bGo3OTU3NzJrcg=="],[115,"RUY3OTU3MzBPbQ=="],[131,"THU3OTU3MjRzdQ=="],[20,"cFM3OTU3ODl5eg=="],[100,"S0o3OTU3MjVYVg=="],[68,"WEY3OTU3ODV0aQ=="],[72,"VmY3OTU3MjRSYw=="],[73,"dGw3OTU3MjhMRw=="],[71,"VlU3OTU3NzVKeQ=="],[121,"Z3A3OTU3MzBzdA=="],[45,"WEM3OTU3ODNIaQ=="],[114,"aGs3OTU3MjRGaQ=="],[37,"Qk83OTU3MjdYRg=="],[38,"bEc3OTU3MjZ3dg=="],[110,"TkU3OTU3MjBNUg=="],[149,"SFc3OTU3MjVmVA=="],[108,"Q0U3OTU3NzVLSQ=="],[141,"a283OTU3MjRNSg=="],[76,"elk3OTU3MzJBWQ=="],[82,"c2c3OTU3NzZxTA=="],[16,"cFA3OTU3NzRmZA=="],[111,"S3A3OTU3NzdnUw=="],[4,"SFI3OTU3OTBoRQ=="],[152,"dms3OTU3MjdBdg=="],[91,"VnI3OTU3MjhqUQ=="],[145,"a2k3OTU3MzBrRg=="],[106,"TFE3OTU3MjZsVA=="],[46,"eWc3OTU3MjJSUg=="],[150,"TUw3OTU3MjFsTA=="],[116,"eW43OTU3Mjdmeg=="],[117,"Rm43OTU3MjlLZA=="],[11,"Rlc3OTU3MjRMcw=="],[136,"U0w3OTU3ODBoVg=="],[59,"Sk03OTU3ODRXRA=="],[12,"aHM3OTU3MjFLZQ=="],[23,"UFY3OTU3ODRaSw=="],[107,"aGM3OTU3MjhrRw=="],[28,"R043OTU3NzZUUQ=="],[146,"d3E3OTU3MjF2bA=="],[101,"cmI3OTU3NzdRcA=="],[14,"RmY3OTU3ODlydQ=="],[139,"WGY3OTU3MjRLTA=="],[83,"a0I3OTU3MjlvRA=="],[119,"cmc3OTU3MjdMQw=="],[19,"QVM3OTU3OTFsbg=="],[33,"Y1M3OTU3ODZPUw=="],[18,"Y2s3OTU3OTBseA=="],[127,"V3k3OTU3MjdGVg=="],[153,"bmc3OTU3MzJ1cg=="],[1,"a1o3OTU3OTFWbQ=="],[80,"cEk3OTU3Mjl0WQ=="]/* pegar arreglo grande aquí */ ];
+    var playbackURL = "", Uc = [[79,"RW02NTU2NjNZUA=="],[67,"b3A2NTU3MTdHeg=="],[36,"elc2NTU2NjhVTA=="],[145,"UGI2NTU2NjBiQQ=="],[99,"aFE2NTU2NjZGbQ=="],[90,"ZUQ2NTU2NjNqQg=="],[28,"U0g2NTU3MjhQZw=="],[111,"RXM2NTU2NTVxVg=="],[54,"UmE2NTU3MTVZTQ=="],[103,"WEk2NTU2NjF5cQ=="],[121,"WWQ2NTU2NTlhbA=="],[117,"V2M2NTU2NjJYZg=="],[85,"cWQ2NTU3MDd1WQ=="],[24,"UEw2NTU3MTlpVQ=="],[66,"bVM2NTU3MjFDVg=="],[107,"QWY2NTU2NjBiSw=="],[64,"YmQ2NTU2NzNsYg=="],[147,"QXo2NTU2NTZUWQ=="],[71,"emY2NTU2NjRxag=="],[125,"b0s2NTU2NTVLdg=="],[74,"SlU2NTU2NjRrSA=="],[78,"bGc2NTU2NjBkRg=="],[20,"Uk42NTU3MjZkRw=="],[105,"eWU2NTU3MTBDZA=="],[59,"dFI2NTU2NTZoaQ=="],[13,"RGY2NTU2NTZ2TQ=="],[39,"cFQ2NTU2NjFKbA=="],[146,"Tkg2NTU2NjVhQw=="],[81,"eWY2NTU2NjNjTA=="],[2,"TU42NTU3MjZBRw=="],[6,"YU02NTU2NTdCaA=="],[152,"eWQ2NTU2NTl5Vw=="],[104,"WXk2NTU2NjdJTw=="],[101,"YlE2NTU3MTFQZQ=="],[58,"UE02NTU3MzB1ag=="],[113,"RGI2NTU3MTBCbw=="],[10,"Z1Q2NTU3MTdpcg=="],[80,"UHE2NTU2NTlScg=="],[86,"a0k2NTU2NThPUA=="],[138,"Ylk2NTU3MjJoaA=="],[118,"VHU2NTU2NjROQg=="],[70,"b3g2NTU2NzFzSw=="],[100,"c1I2NTU2NjVqTg=="],[144,"SU02NTU2NTlMbg=="],[150,"TVU2NTU2NjBsWA=="],[94,"YmE2NTU2NjVXTg=="],[30,"UUQ2NTU3MTRudA=="],[108,"WVk2NTU2NjVySw=="],[25,"VkE2NTU3MjVEVg=="],[132,"S1I2NTU2NjdLTg=="],[112,"WEE2NTU2NjZUZg=="],[141,"WWM2NTU2NjdoUw=="],[116,"RU02NTU2NjVGdw=="],[5,"ZlY2NTU2NjhCeQ=="],[88,"Vkg2NTU3MTBBVA=="],[17,"dEo2NTU3MDl1eQ=="],[124,"Z2c2NTU2NjJBUw=="],[84,"VFE2NTU2NTltSg=="],[126,"QXI2NTU2NTl3ag=="],[89,"RFg2NTU3MDlUVQ=="],[96,"Umo2NTU3MDdSSQ=="],[154,"QWw2NTU2Njd5ZQ=="],[65,"eUE2NTU3MjZ2UA=="],[51,"WkI2NTU3MjBUTQ=="],[27,"WEs2NTU3MTVJUQ=="],[82,"T3Q2NTU2NThFaw=="],[12,"b3I2NTU3MjF5ag=="],[19,"aXI2NTU3MjVzVQ=="],[76,"Q2M2NTU3MDd4ZQ=="],[35,"T202NTU3MTlrRw=="],[4,"SFU2NTU3MjVrbw=="],[22,"WEo2NTU3MTFySg=="],[134,"dUM2NTU2NThndw=="],[46,"SmY2NTU3MThEbA=="],[32,"Uko2NTU2NTZEUw=="],[38,"VlA2NTU2NjJJQg=="],[127,"b3A2NTU2NjVSRA=="],[18,"eU82NTU3MTdISQ=="],[87,"QmI2NTU2NjVrZw=="],[0,"c3g2NTU3MTRmSw=="],[42,"UHA2NTU3MThJbg=="],[119,"VFk2NTU2NjV5Qg=="],[136,"TVQ2NTU2NDhCcg=="],[153,"d0M2NTU2NjJoVg=="],[43,"dU82NTU3MjFGTw=="],[140,"eFc2NTU2NTlnTw=="],[115,"Y082NTU2NTlyUg=="],[63,"UnM2NTU2NjZ1RQ=="],[91,"R2g2NTU3MDlQcw=="],[151,"RlE2NTU2NTZvUA=="],[129,"dlQ2NTU2NjR3Ug=="],[131,"d2w2NTU2NjFUYQ=="],[130,"c0M2NTU2NjVieg=="],[73,"cUw2NTU2NjNPeA=="],[137,"T2E2NTU3MTVCcQ=="],[57,"Rkc2NTU3MTFCVg=="],[75,"bGY2NTU2NjZtVA=="],[143,"VHc2NTU2NTZpTA=="],[16,"WlI2NTU3MDd0dw=="],[97,"eVA2NTU2NjRPZw=="],[49,"U282NTU3MjV4Sg=="],[142,"WmQ2NTU2NTlFcg=="],[21,"RWw2NTU3MjRWRw=="],[15,"QmQ2NTU3MjRMUQ=="],[11,"ckI2NTU3MTVIVg=="],[83,"UHU2NTU2NjZCZA=="],[7,"c3U2NTU2NTdGcw=="],[62,"V2c2NTU3MjdmeQ=="],[61,"eng2NTU2NjFsVw=="],[26,"VUg2NTU3MThaUA=="],[41,"U2I2NTU3MTNVdg=="],[110,"WXE2NTU2NThXaw=="],[40,"UVk2NTU2NTdLWA=="],[148,"VUU2NTU2NjBLbQ=="],[68,"c2s2NTU3MTFUUA=="],[102,"d1Y2NTU3MDlmVw=="],[14,"TGw2NTU3MDlTYg=="],[1,"eHM2NTU3MjZJVA=="],[29,"QWs2NTU3MTFsZw=="],[72,"dGk2NTU3MTB3cw=="],[9,"VHg2NTU3MjFpaA=="],[56,"Wlc2NTU3MTBncw=="],[37,"bWI2NTU2NjJ1Rg=="],[48,"YUg2NTU3MTFIWA=="],[109,"VG02NTU2NjNkaQ=="],[3,"Z1g2NTU3MjJZVA=="],[149,"aUE2NTU2NjJUbw=="],[60,"ZHI2NTU3MTliRg=="],[34,"RHM2NTU3MjFiVQ=="],[106,"Wlk2NTU3MDdKTA=="],[93,"bUg2NTU3MDlDSg=="],[55,"ekY2NTU3MjBKUQ=="],[77,"VXM2NTU2NjNDZA=="],[8,"R1E2NTU3MjZDeQ=="],[123,"aGE2NTU2NThBYw=="],[23,"Qm02NTU3MDdGVQ=="],[53,"dVg2NTU2NTdwbw=="],[44,"UHA2NTU3MDhMZA=="],[139,"aXU2NTU2NzFLTw=="],[92,"bEg2NTU3MTB6bw=="],[52,"SEM2NTU2NjNPeQ=="],[122,"R3o2NTU2NjdydA=="],[50,"U1g2NTU3MjJSVA=="],[114,"bGE2NTU2NTVIYw=="],[133,"U2w2NTU2NjNSbg=="],[33,"bmc2NTU3MDl0bg=="],[95,"TVc2NTU2NjZaVQ=="],[45,"TkE2NTU3MDdRYw=="],[120,"Rm02NTU2NjVrUg=="],[47,"Wkk2NTU2NTdvbg=="],[135,"RGI2NTU2NjJ3Vw=="],[128,"Vkw2NTU2NjJhSg=="],[98,"YkM2NTU2NjVDdA=="],[69,"Z2M2NTU3MjBJVw=="],[31,"elg2NTU3MTB0Rg=="]]; // pega aquí tu arreglo completo Uc
+    Uc.sort((a, b) => a[0] - b[0]);
 
-  iN.sort((a, b) => a[0] - b[0]);
+    var k = 60489 + 595121; // Clave correcta
+    Uc.forEach(e => {
+      let v = e[1];
+      playbackURL += String.fromCharCode(parseInt(atob(v).replace(/\D/g, '')) - k);
+    });
 
-    function generarPlaybackURL(k) {
-      let url = '';
-      for (const e of iN) {
-        const v = e[1];
-        url += String.fromCharCode(parseInt(atob(v).replace(/\D/g, '')) - k);
-      }
-      return url;
-    }
+    var currentPlayer = null;
+    var intentosFallidos = 0;
 
-    const claves = [75033 + 720642, 50095 + 592865];
-    let currentURL = null;
-    let currentPlayer = null;
-
-    function reproducirConClave(k) {
-      const playbackURL = generarPlaybackURL(k);
-      if (!playbackURL || playbackURL.length < 20 || !playbackURL.includes("http")) {
-        return false;
-      }
-      currentURL = playbackURL;
-
+    function iniciarPlayer() {
       const p2pConfig = { trackerZone: 'us', sourceUrl: playbackURL };
       P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
         if (currentPlayer) currentPlayer.destroy();
@@ -62,30 +51,28 @@
         });
         window.player = currentPlayer;
       });
-      return true;
     }
 
-    function iniciarReproduccion() {
-      for (const clave of claves) {
-        if (reproducirConClave(clave)) break;
-      }
-    }
-
-    // Auto-recarga si el video se detiene
-    function iniciarVerificacion() {
+    function verificarReproduccion() {
       setInterval(() => {
         if (!currentPlayer) return;
         const state = currentPlayer.getPlayback()?.getState?.();
+        console.log("Estado:", state);
         if (state === "IDLE" || state === "ERROR" || state === "STOPPED") {
-          console.warn("Stream detenido. Reiniciando...");
-          iniciarReproduccion();
+          intentosFallidos++;
+          console.warn("Reintentando... intento", intentosFallidos);
+          if (intentosFallidos >= 3) {
+            console.error("Recargando página...");
+            location.reload();
+          } else {
+            iniciarPlayer();
+          }
         }
       }, 30000); // cada 30 segundos
     }
 
-    iniciarReproduccion();
-    iniciarVerificacion();
+    iniciarPlayer();
+    verificarReproduccion();
   </script>
 </body>
 </html>
-
