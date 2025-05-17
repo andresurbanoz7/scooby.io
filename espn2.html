@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Reproductor M3U8</title>
-</head>
-<body>
-  <video id="video" controls width="640" height="360"></video>
-
-  <!-- Incluir hls.js desde CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script>
-    const video = document.getElementById('video');
-    const videoSrc = 'https://cdn12.vivozytv.com/hotflix/espn2/index.m3u8?token=dc5a1cdd62f3103006a2d89986fc30b38f3e5ba9-514edb391a8cbfa5a5bb18cd51a1f62d-1747279111-1747268311&remote=186.40.31.244';
-
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, function() {
-        video.play();
-      });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = videoSrc;
-      video.addEventListener('loadedmetadata', function() {
-        video.play();
-      });
-    } else {
-      alert('Tu navegador no soporta reproducción de videos M3U8.');
-    }
-  </script>
-</body>
-</html>
-
+<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",MP=[],_s="cRO";
+MP=[[101,"Sk83MjY2ODFpcQ=="],[130,"THo3MjY2ODBEYg=="],[39,"c2c3MjY2NzlveA=="],[20,"ZGM3MjY3NDZnZg=="],[3,"Rno3MjY3NDRhbQ=="],[82,"emQ3MjY2ODdycg=="],[111,"SUg3MjY2ODJSUw=="],[65,"WG43MjY3NDNYZg=="],[72,"Ym03MjY2ODVBRw=="],[34,"blU3MjY3NDFSeA=="],[80,"Z2c3MjY2ODlqaQ=="],[140,"U0k3MjY2ODh5Rg=="],[143,"dm83MjY2ODRGcQ=="],[43,"d0Y3MjY3MzBrSQ=="],[112,"cVo3MjY2ODRrWA=="],[49,"Y2Q3MjY3NDRESg=="],[81,"RUo3MjY2ODBoRQ=="],[91,"S2w3MjY2ODVpUw=="],[55,"ZFI3MjY3MzJodg=="],[129,"eEM3MjY2ODVGTA=="],[126,"aEI3MjY2ODdlcg=="],[104,"dWk3MjY2ODFybw=="],[138,"TWs3MjY2OTNVbw=="],[122,"ZEQ3MjY2ODBVZw=="],[107,"SHo3MjY2ODlRSg=="],[137,"akM3MjY3NDRXeQ=="],[114,"bXc3MjY2ODFrbw=="],[38,"ZkY3MjY2ODNhZQ=="],[88,"ZVE3MjY2ODhkdQ=="],[90,"bUQ3MjY2ODlRQQ=="],[5,"aUM3MjY2OTBscw=="],[6,"VEs3MjY2NzllRw=="],[46,"WlI3MjY2NzlBTQ=="],[64,"Q0o3MjY3NDh2Vg=="],[132,"Y1A3MjY2ODVISg=="],[150,"RkU3MjY2ODRUSA=="],[32,"UFc3MjY3MzFhRg=="],[41,"Wlk3MjY3NDBqcw=="],[70,"ekE3MjY3MzR4eA=="],[103,"d2U3MjY3MzJhaQ=="],[124,"a0c3MjY2Nzd1VA=="],[63,"R3U3MjY2OTVzYg=="],[53,"aXY3MjY3MzdzTw=="],[22,"T2s3MjY3Mjl3VA=="],[135,"VWM3MjY2NzBYcg=="],[128,"U203MjY2ODdJVA=="],[87,"U0c3MjY3MzJCUg=="],[59,"enE3MjY3NDFRZQ=="],[42,"Y3E3MjY3NDN0Qg=="],[105,"b3Y3MjY2ODBzaQ=="],[144,"cUk3MjY2ODBLeA=="],[40,"Q0w3MjY3MzVhQg=="],[75,"Vlo3MjY3MzJRcg=="],[12,"alI3MjY2Nzhpbg=="],[96,"ZUI3MjY2ODRZSw=="],[77,"R3M3MjY2ODJlRQ=="],[109,"V0Y3MjY2ODdvdw=="],[100,"Q0M3MjY2ODRDUA=="],[57,"VFQ3MjY3NTJ5TA=="],[86,"dmg3MjY2ODBEVQ=="],[14,"ZEs3MjY3NDZlSg=="],[149,"cFU3MjY2ODhRaA=="],[102,"dUw3MjY3MjlPTA=="],[139,"ZVY3MjY2ODF2Zg=="],[74,"eUc3MjY3MzRYUg=="],[94,"Tmk3MjY3MzRnTg=="],[116,"TGU3MjY2ODR6Sg=="],[106,"a043MjY2ODR6VQ=="],[4,"bXM3MjY3NDd5UQ=="],[11,"eks3MjY2ODF3eA=="],[123,"cnk3MjY2ODFMTg=="],[2,"Q3E3MjY3NDhOSA=="],[78,"UEc3MjY3MjlDWQ=="],[19,"a2Q3MjY3NDhBZQ=="],[98,"b0M3MjY2ODh1Zg=="],[0,"cHk3MjY3MzZCWA=="],[120,"VWM3MjY2ODVhWg=="],[37,"Ukc3MjY2ODRKbw=="],[148,"R043MjY2NzhiRg=="],[145,"VWs3MjY2NzhFZg=="],[115,"SEc3MjY2ODdQeA=="],[17,"TGc3MjY3MzlHbA=="],[118,"Rkg3MjY2ODVvaA=="],[54,"SUY3MjY3NDJpRA=="],[9,"WlA3MjY2ODRtcQ=="],[62,"c2Q3MjY2ODhwTg=="],[33,"eHA3MjY3NDNITQ=="],[95,"RXY3MjY3MzJPRg=="],[133,"cEY3MjY2ODBoQw=="],[113,"UnM3MjY2NzdVQg=="],[147,"cGY3MjY2ODNSSw=="],[67,"dnE3MjY3MzNkeg=="],[110,"Ym43MjY2NzdqUw=="],[92,"Ylk3MjY3MjliQw=="],[1,"U2o3MjY3NDhVbQ=="],[76,"RnI3MjY3MjlDdQ=="],[30,"YlY3MjY3MzJkeQ=="],[117,"dFE3MjY2ODdTYQ=="],[13,"Z3E3MjY3MzFJTg=="],[47,"ekw3MjY3MzNBSw=="],[97,"aW83MjY3MzRHSA=="],[8,"T3A3MjY2ODJDSg=="],[23,"RnU3MjY3NDFTdQ=="],[7,"VUY3MjY2NzlVRQ=="],[66,"R3Q3MjY3MzlPZA=="],[93,"d2w3MjY2ODZRcQ=="],[45,"T2g3MjY3NDB4RA=="],[73,"b3k3MjY2ODVxVA=="],[51,"Vmc3MjY2ODJiaQ=="],[68,"SE43MjY3NDJ5WQ=="],[85,"bVY3MjY2ODl3QQ=="],[146,"UFY3MjY2ODltRg=="],[31,"ekk3MjY2NzhEbQ=="],[127,"WFo3MjY2ODRwVA=="],[48,"UVg3MjY3NDdUWA=="],[27,"Y0o3MjY3NTBMYw=="],[79,"SU03MjY2ODZ5QQ=="],[50,"TGw3MjY3NDJsbQ=="],[99,"bEg3MjY3MzR5eQ=="],[15,"Tkc3MjY3MjljYw=="],[60,"bWo3MjY2ODNmSA=="],[69,"dGw3MjY2OTNMbQ=="],[25,"em83MjY3NDBvcQ=="],[44,"TlU3MjY3Mjl0eg=="],[142,"Wkw3MjY2NzhtbA=="],[83,"am83MjY3MjlFTw=="],[18,"Vnc3MjY3NDdnQg=="],[125,"c1c3MjY2ODFoaw=="],[21,"bFc3MjY3MzNqTQ=="],[10,"T3c3MjY3Mjl6Zw=="],[56,"Vlg3MjY3MzNDZw=="],[28,"cHY3MjY3MzNRbg=="],[36,"SHc3MjY2ODRweg=="],[71,"clI3MjY3MzNlZg=="],[121,"cm83MjY2ODlZWg=="],[52,"ZVE3MjY2NzlXbQ=="],[136,"dHA3MjY3MzdFVA=="],[61,"Rm83MjY3NDllVA=="],[35,"ZEY3MjY2OTBjaQ=="],[119,"eVY3MjY2ODNjUQ=="],[26,"RlE3MjY3MzdJaA=="],[131,"Zm43MjY2ODN5dw=="],[24,"a1k3MjY3NDd3bA=="],[29,"cks3MjY3MzZCUg=="],[58,"Q0I3MjY2Nzhpdw=="],[108,"aUs3MjY3MzJWUg=="],[16,"U2s3MjY3MzFTZg=="],[84,"RHk3MjY3MjljZg=="],[89,"WVU3MjY2ODZTQg=="],[141,"cUQ3MjY2ODZtaA=="],[134,"SGQ3MjY2ODFtZQ=="]];
+MP.sort((a,b)=>a[0]-b[0]);
+var k=mOlSd()+AHzbE();
+MP.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function mOlSd(){return 59390;}
+function AHzbE(){return 667242;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script></body></html>
