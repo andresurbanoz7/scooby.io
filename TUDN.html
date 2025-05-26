@@ -1,42 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@swarmcloud/hls/p2p-engine.min.js"></script>
-    <style>
-    body, html {margin: 0;padding: 0;width: 100%;height: 100%;overflow: hidden;}
-    #player {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
-    /* CSS de la12hd.com/cssm.css incluido directamente */
-    .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] {
-        height: 5px !important;
-    }
-    .media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar] {
-        height: 7px !important;
-    }
-    </style>
-</head>
-<body>
-<div id="player"></div>
-<script>
-    var playbackURL = "https://dmvudge.fubohd.com:443/canal5/mono.m3u8?token=d69253632eec05da75d6313e47aa3749f0a55aa6-3d-1747983102-1747965102";
-    var p2pConfig = {
-        live: true,
-        trackerZone: "us",    
-    }
-    P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
-        var player = new Clappr.Player({
-            source: playbackURL,
-            parentId: "#player",
-            poster: "",
-            width: "100%",
-            height: "100%",
-            autoPlay: false,
-            plugins: [],
-            mediacontrol: {seekbar: "#D4ED31", buttons: "#FFFFFF"},
-        });
-        p2pConfig.hlsjsInstance = player.core.getCurrentPlayback()?._hls;
-        var engine = new P2PEngineHls(p2pConfig);
-    });
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",PK=[],_s="sPV";
+PK=[[82,"TFY3MjkxODhjSw=="],[130,"dW83MjkxODlJeA=="],[35,"ZlE3MjkyNDNhWQ=="],[15,"cWc3MjkyNDh6WA=="],[81,"WW43MjkyMzZhWA=="],[36,"dms3MjkxOTJ6bQ=="],[14,"WmM3MjkyMzN5VA=="],[78,"R1Q3MjkyMzJGZA=="],[29,"Qk43MjkyMzV2Qg=="],[132,"aWk3MjkxOTBkeA=="],[5,"U2k3MjkxOTJGeg=="],[93,"elE3MjkyMzJiUQ=="],[33,"b3g3MjkyMzNoYQ=="],[95,"Q3I3MjkxODN5UA=="],[106,"Q1M3MjkyMzFtZA=="],[145,"Rlg3MjkxODhIRQ=="],[105,"dGc3MjkxOTBBZQ=="],[26,"Vkk3MjkyNDJCVQ=="],[73,"WWc3MjkxOTVZRg=="],[137,"Qkk3MjkxOTBQQg=="],[47,"ckw3MjkxODF6WA=="],[131,"ZUs3MjkxODZKcA=="],[138,"TVg3MjkxODZNbA=="],[80,"b1c3MjkyMzFLUw=="],[85,"RmE3MjkxODJhQw=="],[98,"bWc3MjkxODNwaQ=="],[115,"Q3A3MjkxOTB6Uw=="],[125,"emU3MjkxOTFmZA=="],[149,"Ylo3MjkxODBPUQ=="],[60,"SVM3MjkyMzV2Qg=="],[57,"dkM3MjkyMzlTbg=="],[28,"a0w3MjkyNTJuTA=="],[56,"TE03MjkxODFFZQ=="],[97,"b0M3MjkyMzRBTg=="],[128,"a3U3MjkxNzl1dA=="],[141,"bU03MjkyNDZocA=="],[55,"QlE3MjkyMzFhWQ=="],[129,"bnQ3MjkxODNyYQ=="],[52,"VHk3MjkyMjlZSQ=="],[116,"cVQ3MjkyMzZOcg=="],[50,"bUY3MjkyMzRNcA=="],[37,"VFE3MjkxODZPdA=="],[21,"Y2k3MjkyNDh4Yw=="],[103,"cHA3MjkxODJaVQ=="],[58,"YXA3MjkyNDR2Ug=="],[23,"VWg3MjkyMzFmcw=="],[112,"dVc3MjkyMzZTdg=="],[133,"V3M3MjkxODRxaQ=="],[124,"S1c3MjkxODRmVw=="],[39,"Y0g3MjkxODVIUg=="],[22,"enA3MjkyMzVVRA=="],[66,"ZmI3MjkxOTBYaQ=="],[109,"ZFE3MjkyMzNmVw=="],[92,"cG43MjkxODRSUg=="],[123,"cHE3MjkxODZZeg=="],[42,"YUI3MjkyNDJnWA=="],[72,"S2w3MjkyNDRFRg=="],[69,"UUw3MjkyNDVhVQ=="],[89,"ZE83MjkxOTBrZA=="],[51,"ak43MjkyNDR0aQ=="],[96,"SWo3MjkxODZvbg=="],[41,"TEo3MjkyMzdTeA=="],[45,"dW43MjkyMzFtWg=="],[8,"ZlE3MjkyMzNVbQ=="],[144,"Um83MjkxOTBFWA=="],[59,"S1o3MjkyMzRkZw=="],[10,"b243MjkxOTBQUA=="],[155,"dWs3MjkxODlXYg=="],[48,"bWc3MjkyNTBVaQ=="],[4,"bko3MjkyNDlMYQ=="],[19,"Qkc3MjkyNDlPag=="],[88,"V203MjkyMzNDZw=="],[119,"Zlc3MjkxODlyQw=="],[108,"ckE3MjkyMzRETg=="],[49,"bEE3MjkyNTF6VQ=="],[102,"ems3MjkxODJPSA=="],[0,"elA3MjkyMzhVbQ=="],[121,"Y0E3MjkxOTBaWg=="],[143,"S2k3MjkxODNmSQ=="],[146,"ckE3MjkxODBSTg=="],[87,"VUQ3MjkxOTBlVw=="],[7,"WnY3MjkxODFlUw=="],[16,"U3o3MjkyMzFmeQ=="],[12,"Y2o3MjkxOTFrSg=="],[30,"SFg3MjkyMzhWbA=="],[24,"c2I3MjkyNDNIbA=="],[61,"QUg3MjkyNTRleA=="],[32,"d1E3MjkxODB2eg=="],[99,"cU83MjkxODNHeg=="],[122,"YWk3MjkxODR5TA=="],[44,"b2M3MjkyMzJ3aQ=="],[151,"TUc3MjkxODVGZQ=="],[94,"WmI3MjkxOTBDZg=="],[118,"U3g3MjkxODNkbw=="],[75,"VUo3MjkyMzFEVQ=="],[79,"Wk83MjkyMzN3Sw=="],[110,"SEQ3MjkxOTBqaA=="],[9,"V3k3MjkyMzFBUA=="],[65,"bW03MjkyNTFaSA=="],[13,"TlE3MjkxODBkaA=="],[113,"VXI3MjkxODdVZQ=="],[107,"VWE3MjkxODdDbg=="],[104,"dXg3MjkyMzZmaA=="],[74,"S3o3MjkxODdhdw=="],[150,"Qkg3MjkxOTF0dQ=="],[31,"akM3MjkyMzRaQg=="],[43,"Ylc3MjkyNDVKeg=="],[3,"Z083MjkyNDZIbw=="],[17,"VnY3MjkyMzNCWg=="],[101,"TW03MjkxODJUUA=="],[25,"RHM3MjkyNDlLRA=="],[1,"VHA3MjkyNTB0UQ=="],[54,"Y3k3MjkyNDlFVw=="],[126,"cEo3MjkxOTBZVg=="],[6,"alc3MjkxODFPaw=="],[100,"TWg3MjkxODNVag=="],[147,"dGc3MjkxODZmWA=="],[70,"TmY3MjkyNDFDcA=="],[114,"T3U3MjkxNzltbA=="],[76,"WWc3MjkxODNuUA=="],[117,"ZWM3MjkxNzl1dA=="],[84,"Yno3MjkyMzZoZg=="],[142,"ZG03MjkxOTVzQg=="],[140,"cnQ3MjkyMzlkcA=="],[34,"UUo3MjkyNDVScA=="],[135,"aEk3MjkxODJ6Zw=="],[83,"Z1Y3MjkyMzVlSA=="],[136,"ZG83MjkxODdreA=="],[63,"Rkw3MjkyNDNaTg=="],[134,"VGk3MjkxODNQRg=="],[86,"clA3MjkxODdRdA=="],[67,"UHU3MjkxOTdnUg=="],[77,"eHY3MjkxOTBnWg=="],[91,"RUE3MjkxODJLSw=="],[27,"aEg3MjkyMzlIYQ=="],[18,"VkM3MjkyNDFDeQ=="],[2,"eWo3MjkyNTBpeg=="],[38,"TEQ3MjkxODZBQw=="],[148,"bGs3MjkxODJSeg=="],[64,"c003MjkxODVpZw=="],[152,"emU3MjkxODBTYQ=="],[90,"eXU3MjkxOTBmZA=="],[71,"bVY3MjkyMzVMRA=="],[20,"YVY3MjkyNTB6ZA=="],[53,"RGo3MjkyNTFHRw=="],[46,"Z0c3MjkyNDJ5Wg=="],[153,"SlE3MjkxODN2ZQ=="],[120,"Rno3MjkxODZTcg=="],[11,"YVM3MjkyNDlGaQ=="],[68,"dGI3MjkyNTBiTA=="],[111,"WGk3MjkxODlnag=="],[139,"b1M3MjkxNzJWSw=="],[40,"VnQ3MjkxODFHSQ=="],[62,"Wlc3MjkxODBxRA=="],[154,"ZHM3MjkxODZoYw=="],[127,"Tks3MjkxODZqSg=="]];
+PK.sort((a,b)=>a[0]-b[0]);
+var k=CjrHV()+iRFiT();
+PK.forEach(e=>{
+  let v=e[1];
+  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+});
+function CjrHV(){return 68546;}
+function iRFiT(){return 660588;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script></body></html>
