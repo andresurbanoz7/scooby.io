@@ -1,10 +1,86 @@
-<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",Fu=[],_s="wAg";
-Fu=[[122,"Wlk5MjgyOTNzRg=="],[41,"S0s5MjgzNDlWWQ=="],[24,"QXE5MjgzNTZPdA=="],[57,"S3A5MjgzNjFJdg=="],[9,"dnk5MjgyOTNuRg=="],[35,"WkQ5MjgyOTlRQg=="],[44,"anA5MjgzMzhzbA=="],[83,"cEY5MjgyOTRRdA=="],[37,"SlE5MjgyOTNvZg=="],[109,"S1c5MjgyOTRFeQ=="],[148,"dnc5MjgyOTVjRA=="],[16,"VUI5MjgzNDBmYQ=="],[86,"eXU5MjgzNDNSRQ=="],[60,"Y2w5MjgyOTJpeQ=="],[124,"T2I5MjgyODZuSA=="],[56,"dnA5MjgzNDJ2eQ=="],[98,"aEI5MjgyOTJQUA=="],[45,"T3M5MjgzNDljeA=="],[12,"d0w5MjgyODdCQw=="],[125,"dmQ5MjgyOTBBZA=="],[84,"ZVM5MjgzNDFNcg=="],[4,"Qk85MjgzNTZvVg=="],[134,"QVc5MjgyOTVieA=="],[137,"b0I5MjgzNTNraQ=="],[43,"d2k5MjgzMzlXeg=="],[48,"WWQ5MjgzNTZLRA=="],[63,"a3g5MjgzMDRWTA=="],[19,"elc5MjgzNTdORw=="],[101,"VXQ5MjgyODlidg=="],[1,"aUk5MjgzNTd1aw=="],[138,"R0I5MjgzMDJJag=="],[14,"VXA5MjgzNTVMUQ=="],[143,"cHg5MjgyOTF1Rg=="],[38,"TVA5MjgyOTJ2dA=="],[25,"S1o5MjgzNDlNSQ=="],[0,"Rko5MjgzNDVFWg=="],[127,"c3I5MjgyOTNoSA=="],[31,"cG05MjgyODduTA=="],[75,"eHI5MjgzNDNvaQ=="],[21,"cXI5MjgzNDJtQw=="],[102,"WmE5MjgyOTFFTQ=="],[106,"aXY5MjgyOThZYw=="],[80,"WXA5MjgyOThtTA=="],[8,"YnI5MjgyOTFjTA=="],[7,"TWc5MjgyODhNYg=="],[113,"TW05MjgyODZvVA=="],[59,"eWo5MjgzNTBGYQ=="],[130,"V285MjgyOTVHcw=="],[50,"eGk5MjgzNTFUTQ=="],[65,"c0s5MjgzNTJBTw=="],[142,"TFA5MjgyODdJWA=="],[128,"eVQ5MjgyOTdLUQ=="],[52,"bHU5MjgyODhicA=="],[149,"S005MjgyODd6Zw=="],[119,"c2Y5MjgyOThHUw=="],[23,"aVk5MjgzNTBxbw=="],[36,"dUQ5MjgyOTNOYg=="],[118,"bE85MjgyOTNLeA=="],[26,"b1U5MjgzNDZObg=="],[68,"SEY5MjgzNTF1bQ=="],[151,"eUQ5MjgyOTVKUg=="],[94,"YmM5MjgyOTB2eA=="],[139,"TXU5MjgyOTBIeQ=="],[62,"Tkg5MjgyOTdWcg=="],[49,"Tkk5MjgzNTNOVQ=="],[85,"bGg5MjgzNDNNcw=="],[111,"YlQ5MjgyOTdjSg=="],[95,"dmo5MjgyODlRVg=="],[82,"Um85MjgyOTVzeg=="],[34,"TWE5MjgzNTBTZA=="],[71,"TWk5MjgyOTNvTw=="],[100,"d1A5MjgyOTJKZA=="],[58,"ZGk5MjgyODdZWA=="],[114,"WWM5MjgyOTBhSw=="],[5,"emo5MjgyOTl3Wg=="],[120,"akQ5MjgyOTZvbg=="],[121,"R2o5MjgyOTJKeg=="],[29,"dFE5MjgzNDVxRA=="],[13,"bXo5MjgzNDBOeQ=="],[53,"TWg5MjgzNDZPWg=="],[70,"SXQ5MjgyOTJEeg=="],[117,"YVU5MjgyOTdNSg=="],[93,"UGc5MjgyOTRXSw=="],[51,"UUs5MjgyOTJ2Yg=="],[55,"Ykg5MjgzNDFXaw=="],[115,"UWE5MjgyOTZheA=="],[74,"eG05MjgyOTFQUQ=="],[150,"cHM5MjgyOTNmTg=="],[67,"Ums5MjgzNDJZbg=="],[81,"QmE5MjgzNDBkbQ=="],[145,"WlM5MjgyOTJYRg=="],[11,"dW85MjgyOTBncw=="],[6,"SlY5MjgyODhGdQ=="],[64,"Z0c5MjgzNTdMSA=="],[107,"cFg5MjgyOTZVZg=="],[146,"WFY5MjgyODdDag=="],[144,"Y3Y5MjgyODlHdg=="],[133,"eWg5MjgyOTNXdg=="],[141,"VnM5MjgyOTBVZg=="],[15,"Z2I5MjgzMzhhbQ=="],[61,"ZEw5MjgzNTh1bA=="],[2,"VGM5MjgzNTdtSw=="],[132,"WVc5MjgyOThPRA=="],[96,"amc5MjgyOTFjRw=="],[131,"akQ5MjgyOTNIaA=="],[17,"YW85MjgzNDh3VA=="],[30,"ZXI5MjgzNDFxWA=="],[46,"Ynk5MjgyODhYZg=="],[129,"ZXY5MjgyOTNNaQ=="],[33,"Zmw5MjgzNTJiZA=="],[105,"aGU5MjgyOThucA=="],[140,"dHY5MjgyOTdWRQ=="],[135,"RkE5MjgyNzlHcA=="],[47,"cmg5MjgzNDJ6eQ=="],[10,"dFI5MjgzMzhYdQ=="],[73,"c0Y5MjgyOTBEdQ=="],[54,"ekc5MjgzNTFWQQ=="],[123,"b2g5MjgyOTVESw=="],[69,"UGs5MjgzMDJxaQ=="],[18,"dHg5MjgzNTZVTQ=="],[66,"a3A5MjgzNDh2bg=="],[91,"U1Q5MjgyOTNBcQ=="],[78,"T1Y5MjgyOTBqWg=="],[147,"eG45MjgyOTVNUA=="],[103,"R205MjgyOTR3Wg=="],[97,"WGY5MjgzMzh4dA=="],[40,"bVo5MjgzNDRTaw=="],[42,"Y3E5MjgzNTJaQQ=="],[110,"Z3Y5MjgyODZjbQ=="],[32,"ZUg5MjgzNDBkSQ=="],[27,"ZXc5MjgzNTlNVg=="],[72,"R3k5MjgyOTdmZw=="],[76,"SUU5MjgyOTZoUw=="],[39,"TnI5MjgyODhWSw=="],[3,"dFE5MjgzNTNWQQ=="],[89,"SHk5MjgyOTFqZQ=="],[22,"Qk85MjgzMzhVbg=="],[116,"a1Q5MjgyOTN6Yg=="],[104,"c1A5MjgyOTFNcQ=="],[99,"Umw5MjgzNDNSaA=="],[28,"VFQ5MjgzNDJIUQ=="],[88,"Wm45MjgyOTNYZg=="],[112,"YU45MjgyOTFMZw=="],[136,"UEw5MjgzNDZzdw=="],[77,"SVM5MjgzNDNPbg=="],[92,"T2M5MjgzMzhXaw=="],[87,"WHo5MjgzNDNYRg=="],[90,"b1c5MjgzNDFpUg=="],[79,"ZmY5MjgyOTRGZA=="],[126,"VUc5MjgyOTZxWQ=="],[20,"WEo5MjgzNTVpSw=="],[108,"Y045MjgyOTRFcg=="]];
-Fu.sort((a,b)=>a[0]-b[0]);
-var k=yJlGO()+FikgV();
-Fu.forEach(e=>{
-  let v=e[1];
-  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
-});
-function yJlGO(){return 72115;}
-function FikgV(){return 856126;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex" />
+  <title>Reproductor DASH .mpd</title>
+
+  <!-- Clappr Player Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.4.0/dist/clappr.min.js"></script>
+
+  <!-- Plugins y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/mux.js@5.6.7/dist/mux.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-pip@latest/dist/clappr-pip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/dist/clappr-playback-rate-plugin.min.js"></script>
+
+  <!-- Shaka + DASH support -->
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
+
+  <!-- jQuery (si se necesita para algún otro script externo) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+    }
+    #player {
+      width: 100%;
+      height: 100vh;
+    }
+    .player-poster[data-poster] {
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+
+  <script>
+    var player = new Clappr.Player({
+      source: 'https://cdn-live.mundogo.cl/espn/espn.mpd',
+      mimeType: 'application/dash+xml',
+      height: '100%',
+      width: '100%',
+      parentId: '#player',
+      plugins: [
+        LevelSelector,
+        DashShakaPlayback,
+        ChromecastPlugin,
+        ClapprPip.PipButton,
+        ClapprPip.PipPlugin,
+        Clappr.MediaControl
+      ],
+      events: {
+        onReady: function() {
+          var plugin = this.getPlugin('click_to_pause');
+          if (plugin) plugin.disable();
+        }
+      },
+      chromecast: {
+        appId: '9DFB77C0',
+        contentType: 'video/mp4'
+      },
+      shakaConfiguration: {
+        drm: {
+          clearKeys: {
+            '90671184dd82541a9d1786eaa025e345': '74f8eab46c1e43fd8f7b64c21a96fc5b',
+            'b87d7da884bd5f3496015f9c2e53c896': '4451447bdf55fe4451f4a3bf177da59a',
+            'b6989ba0aa0f5e8a817ecdfd9c385994': '75c6e6d57308f34ca482802a5e796a05'
+          }
+        },
+        preferredAudioLanguage: 'pt-BR'
+      },
+      shakaOnBeforeLoad: function(shaka_player) {
+        // Aquí puedes agregar configuraciones antes de iniciar Shaka si es necesario
+      }
+    });
+  </script>
+</body>
+</html>
