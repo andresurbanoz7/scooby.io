@@ -1,10 +1,44 @@
-<!DOCTYPE html><html><head><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style></head><body><div id="player"></div><script>var playbackURL="",yd=[],_s="znE";
-yd=[[138,"bFY2Mzk3NTlMeA=="],[91,"YlE2Mzk3NjZJTg=="],[49,"a0M2Mzk4MDlJZg=="],[100,"Z1k2Mzk3NTl6YQ=="],[67,"Ukg2Mzk3NzJwSg=="],[0,"UWE2Mzk4MTNCRw=="],[22,"UHM2Mzk4MjNPZg=="],[75,"bk02Mzk3NTh2YQ=="],[144,"U0k2Mzk3NjZFdQ=="],[54,"YnA2Mzk4MjVNQw=="],[42,"WWk2Mzk4MTJpRw=="],[45,"SU42Mzk4MDd4aQ=="],[32,"Z3M2Mzk4MDljVA=="],[55,"aWY2Mzk4MjRtRw=="],[29,"dG02Mzk4MjdneA=="],[140,"UkY2Mzk4MTR2Ug=="],[3,"ZWQ2Mzk4MjF4UA=="],[145,"a2Q2Mzk3NTdtVQ=="],[34,"SWo2Mzk4MDhKZA=="],[110,"eVY2Mzk3NjViag=="],[80,"a1Q2Mzk3NjJScw=="],[12,"ZWg2Mzk4MjBKQQ=="],[66,"bXk2Mzk3NjVpdw=="],[82,"Sm82Mzk3NjVqYw=="],[47,"VkE2Mzk4MTdMag=="],[77,"c1A2Mzk3NjNWbA=="],[4,"Q1o2Mzk4MjRYbw=="],[56,"Zk42Mzk3NTZyTQ=="],[146,"b3g2Mzk3NTVZag=="],[136,"bnA2Mzk3NjJMeQ=="],[48,"aFk2Mzk3NTZOcg=="],[132,"YnU2Mzk3NTdZZQ=="],[148,"QUU2Mzk3NjJvbQ=="],[115,"TUc2Mzk3NjVQcg=="],[28,"d1U2Mzk4MTRrTg=="],[96,"Tlc2Mzk3NjJhaA=="],[52,"VFU2Mzk4MjBFRw=="],[21,"TXA2Mzk4MjVrYw=="],[69,"TUI2Mzk4MjBnbQ=="],[139,"UlM2Mzk3NDdPeA=="],[108,"VVk2Mzk4MTFCUg=="],[43,"TUU2Mzk4MTdGcg=="],[134,"eGQ2Mzk3NjJreA=="],[92,"bXM2Mzk3NjZwVw=="],[57,"YUc2Mzk4MTR2Wg=="],[104,"a2U2Mzk3NjV4RA=="],[39,"SEg2Mzk3NjFPRQ=="],[90,"SE82Mzk3NjJPVw=="],[71,"WmY2Mzk4MTBKag=="],[85,"eHc2Mzk4MDdweQ=="],[7,"b1k2Mzk3NTZucQ=="],[6,"d082Mzk3NTZzVg=="],[143,"R1U2Mzk3NThnVg=="],[112,"SWc2Mzk3NjRaaA=="],[76,"WlY2Mzk3NjVyWg=="],[126,"cVo2Mzk3NjNPdw=="],[94,"RUQ2Mzk3NThVSg=="],[151,"c3I2Mzk3NjZMSA=="],[150,"c1A2Mzk3NTh2UQ=="],[31,"bkc2Mzk4MTNnVw=="],[46,"Y2g2Mzk4MDZ3Sg=="],[27,"VFE2Mzk4MTd1SQ=="],[125,"eEc2Mzk3NjJ5SA=="],[86,"Unc2Mzk4MDZvQw=="],[122,"c3I2Mzk3NjJNcA=="],[58,"SVI2Mzk4MTlHYw=="],[2,"S3I2Mzk4MjV1eA=="],[74,"VHc2Mzk3NjBoVw=="],[62,"Y202Mzk3NTVGTA=="],[105,"SHY2Mzk3NTdZTw=="],[93,"alQ2Mzk3NjNEZQ=="],[147,"S0E2Mzk3NjFKcg=="],[127,"Y3Q2Mzk3NTlaaw=="],[135,"cnU2Mzk3NjNlYQ=="],[73,"b0Q2Mzk3NzB1eA=="],[20,"RWk2Mzk4MjRwRQ=="],[70,"Y0g2Mzk4MTZUaA=="],[64,"V0E2Mzk3NjBxZA=="],[128,"SVQ2Mzk3NTRLaw=="],[25,"eGM2Mzk4MThuTw=="],[59,"aXU2Mzk4MDl1ag=="],[137,"RFI2Mzk3NjN1WA=="],[129,"c1A2Mzk3NThoUA=="],[83,"blE2Mzk4MDlncw=="],[103,"S0c2Mzk3NjZ2Sg=="],[133,"Wkg2Mzk3NjFHZg=="],[30,"UHk2Mzk4MTBFZw=="],[23,"am82Mzk4MTBNYQ=="],[1,"SEE2Mzk4MjVSdw=="],[117,"cU02Mzk3NTRQWA=="],[60,"WVM2Mzk4MTBsaA=="],[16,"d042Mzk4MjNSWA=="],[88,"UkM2Mzk3NjNCZg=="],[109,"cXQ2Mzk3NjJPSw=="],[81,"cnI2Mzk3NjNndg=="],[116,"dGs2Mzk3NThSdg=="],[8,"a082Mzk4MTdZdQ=="],[41,"U0o2Mzk3NTZaSg=="],[97,"d2Q2Mzk4MDZHdA=="],[53,"akI2Mzk4MjNyUQ=="],[15,"VU02Mzk4MDhwbA=="],[107,"aUk2Mzk3NjFTSg=="],[98,"T0Q2Mzk3NjJsVw=="],[142,"aGI2Mzk3NzBIRQ=="],[119,"ZXQ2Mzk3NjRpRw=="],[154,"dlM2Mzk3NThLbw=="],[10,"ZEE2Mzk4MTlyYg=="],[5,"bWI2Mzk3NjdEeQ=="],[123,"cEM2Mzk3NThtRQ=="],[50,"QU42Mzk4MjRsQQ=="],[65,"T1Q2Mzk4MjZZUQ=="],[131,"S1o2Mzk3NjJVWg=="],[11,"eUk2Mzk4MDlTcw=="],[51,"Yks2Mzk4MjFHVQ=="],[24,"Z2k2Mzk4MDZObw=="],[152,"ZFY2Mzk3NjBiZw=="],[38,"VHQ2Mzk3NjF0ZQ=="],[44,"V0I2Mzk4MjBmQQ=="],[33,"dnE2Mzk3NTVvcw=="],[114,"a0c2Mzk3NTR1Vg=="],[153,"Z2M2Mzk3NTVrQQ=="],[18,"dlQ2Mzk4MDhCbQ=="],[120,"S2k2Mzk3NjJiWg=="],[84,"eGU2Mzk4MDZoZA=="],[95,"dmI2Mzk3NjRZag=="],[155,"dnU2Mzk3NjNGSg=="],[9,"QVQ2Mzk4MjBhQQ=="],[13,"Yko2Mzk4MTljZQ=="],[121,"YnE2Mzk3NTd4RQ=="],[87,"YUQ2Mzk4MDlrWA=="],[35,"U0g2Mzk4MjB6bQ=="],[78,"WmI2Mzk3NThUcQ=="],[61,"U2k2Mzk4Mjl6dQ=="],[17,"RVY2Mzk4MDZjTA=="],[14,"cGc2Mzk3NTVBTA=="],[40,"VmM2Mzk3NjBXRA=="],[72,"RFA2Mzk4MTlKQw=="],[149,"S042Mzk3NTV0Wg=="],[130,"QXg2Mzk3NjRyag=="],[124,"REc2Mzk3NTdsag=="],[99,"ZFY2Mzk3NjNERw=="],[36,"Z0Q2Mzk4MThqeg=="],[68,"WUg2Mzk4MjVWaw=="],[113,"ZGc2Mzk3NjZPRw=="],[141,"T3g2Mzk4MjFHaw=="],[101,"aWU2Mzk4MDhvZQ=="],[102,"Q2U2Mzk3NThxZg=="],[26,"Y2o2Mzk4MjRuYw=="],[156,"S1o2Mzk3NjRwZg=="],[19,"dHg2Mzk4MTZTbg=="],[111,"bW42Mzk3NTdmaw=="],[79,"bXU2Mzk3NjZLTA=="],[89,"Ylo2Mzk3NjVhcQ=="],[118,"Q3o2Mzk3NThRWQ=="],[106,"VFE2Mzk4MDhnUw=="],[37,"SEk2Mzk3NjdkWA=="],[63,"aGw2Mzk4MThYQg=="]];
-yd.sort((a,b)=>a[0]-b[0]);
-var k=gwxff()+DODDY();
-yd.forEach(e=>{
-  let v=e[1];
-  playbackURL+=String.fromCharCode(parseInt(atob(v).replace(/\D/g,''))-k)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cssm.css">
+    <style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{height:5px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]:hover .bar-background[data-seekbar]{height:7px!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-1[data-seekbar]{background-color:red!important}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar]{background-color:rgba(255,255,255,0.2)!important}body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}#player{position:absolute;top:0;left:0;width:100%;height:100%}.sound-button{position:absolute;top:10px;right:10px;padding:10px 20px;background-color:#002cec;color:#fff;border:none;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s}.sound-button:hover{background-color:#001f4d}</style>
+</head>
+<body>
+<div id="player"></div>
+<script>
+var playbackURL = "https://cdn12.vivozytv.com/hotflix/dsports/index.m3u8?token=ad53aaec5ac98622bd980b1d6cb9b765ff492f10-ae2b13a081f974d20161b09853950163-1750562494-1750551694&remote=181.203.10.109";
+var player;
+var p2pConfig = {
+    trackerZone: 'us',
+    sourceUrl: playbackURL
+};
+P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
+    player = new Clappr.Player({
+        source: playbackURL,
+        parentId: "#player",
+        poster: '',
+        width: '100%',
+        height: '100%',
+        autoPlay: false,
+        playsinline: true, 
+        mute: false,
+        plugins: [SwarmCloudClapprPlugin],
+        playback: {
+            hlsjsConfig: {
+                maxBufferSize: 0,
+                maxBufferLength: 12,
+                liveSyncDurationCount: 3,
+                p2pConfig: p2pConfig
+            }
+        }
+    });
 });
-function gwxff(){return 51211;}
-function DODDY(){return 588498;}var p2pConfig={trackerZone:'us',sourceUrl:playbackURL};P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(()=>{var player=new Clappr.Player({source:playbackURL,parentId:"#player",plugins:[SwarmCloudClapprPlugin],width:'100%',height:'100%',autoPlay:true,mute:false,playsinline:true,playback:{hlsjsConfig:{maxBufferSize:0,maxBufferLength:12,liveSyncDurationCount:3,p2pConfig:p2pConfig}}});window.player=player;});function unmutePlayer(){if(window.player){player.setVolume(100);player.configure({mute:false});document.getElementById('soundButton').style.display='none';}}</script><script id="aclib" type="text/javascript" src="https://alwaysdomain01.online/ads/lib7.js"></script><script>aclib.runPop({zoneId:'9191366'});</script></body></html>
+</script>
+
+</body>
+</html>
