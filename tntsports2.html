@@ -1,62 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Embed Fox-Sports 2</title>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
-  <!-- Luxon -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"></script>
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    iframe {
-      margin-top: 20px;
-      border: none;
-    }
-  </style>
+<title>Page Title</title>
 </head>
 <body>
-  <h1>Canal TNT-sports 2</h1>
-  <button id="btnIframe">Recargar página</button>
-  <br>
-  <iframe id="embedIframe" width="800" height="600" allowfullscreen></iframe>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Recargar la página al hacer clic en el botón
-      document.getElementById("btnIframe").addEventListener("click", function () {
-        window.location.reload();
-      });
-  
-      const url = new URL(window.location.href);
-      const queryStrings = url.searchParams;
-      const r = queryStrings.get("r");
-  
-      if (r && r.length > 0) {
-        // Decodifica el parámetro 'r' en Base64 y lo utiliza como URL para el iframe
-        const decodedString = atob(r);
-        document.getElementById("embedIframe").setAttribute("src", decodedString);
-      } else {
-        // Si no se pasa el parámetro, se establece el enlace por defecto
-        const defaultURL = "https://la12hd.com/vivo/canal.php?stream=max2";
-        document.getElementById("embedIframe").setAttribute("src", defaultURL);
-      }
-    });
-  </script>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width:100%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        webkitAllowFullScreen mozallowfullscreen allowfullscreen 
+        width="640" height="360" frameborder="0" allow="autoplay" 
+        src="https://anym3u8player.com/tv/p.php?url=https%3A%2F%2Fclbpktstvhls-1.clarovideo.com%2Fbpk-tv%2FTNTSP2%2Fhls_fk%2Findex.m3u8">
+    </iframe>
+</div>
+
 </body>
 </html>
-
-
-<script id="aclib" type="text/javascript" src="https://la12hd.com/js/aclib.js?v=3.08"></script>
-
-
-
-
-
-
