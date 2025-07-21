@@ -13,29 +13,34 @@
             height: 100%;
             overflow: hidden;
             background: #000;
+            font-family: Arial, sans-serif;
         }
         .video-container {
             position: relative;
             width: 100%;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
-        /* Ajuste para pantallas móviles */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+        }
+        /* Ajuste para pantallas pequeñas (móviles y tablets) */
         @media (max-width: 768px) {
             iframe {
-                width: 100%;
                 height: calc(100vh - 50px); /* Deja espacio para el botón */
-                border: none;
-                box-shadow: none;
             }
         }
-        /* Estilo del botón de reproducción */
+        /* Botón de reproducción */
         .play-button {
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.7);
@@ -44,16 +49,45 @@
             border-radius: 25px;
             border: none;
             font-size: 16px;
+            cursor: pointer;
             z-index: 2;
             display: none; /* Oculto por defecto */
+        }
+        /* Mejoras visuales para el botón */
+        .play-button:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+        /* Mensaje de advertencia para rotación */
+        .rotate-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            z-index: 3;
+            display: none;
+        }
+        .rotate-message span {
+            display: block;
+            margin-top: 10px;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
     <div class="video-container">
+        <!-- Mensaje de rotación para móviles -->
+        <div class="rotate-message" id="rotateMessage">
+            Por favor, gira tu dispositivo para una mejor experiencia
+            <span>📱</span>
+        </div>
+
         <!-- Botón de "Reproducir" para móviles -->
         <button class="play-button" id="playBtn">▶ Reproducir</button>
-        
+
         <!-- Iframe del video -->
         <iframe 
             id="videoFrame"
@@ -66,9 +100,9 @@
 
     <!-- Script para controlar el video -->
     <script>
-        // Mostrar botón solo en móviles (si autoplay falla)
         const playBtn = document.getElementById('playBtn');
         const videoFrame = document.getElementById('videoFrame');
+        const rotateMessage = document.getElementById('rotateMessage');
 
         // Detectar dispositivo móvil
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -99,12 +133,21 @@
         // Manejar rotación de pantalla
         window.addEventListener('orientationchange', () => {
             if (window.orientation === 90 || window.orientation === -90) {
+                // Modo horizontal
+                rotateMessage.style.display = 'none';
                 document.body.style.height = '100vh';
                 videoFrame.style.height = '100vh';
             } else {
+                // Modo vertical
+                rotateMessage.style.display = 'block';
                 videoFrame.style.height = isMobile ? 'calc(100vh - 50px)' : '80%';
             }
         });
+
+        // Inicializar mensaje de rotación
+        if (isMobile && window.orientation !== 90 && window.orientation !== -90) {
+            rotateMessage.style.display = 'block';
+        }
     </script>
 </body>
 </html>
