@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex" />
-  <title>Reproductor DASH .mpd</title>
-
-  <!-- Clappr Player Core -->
-  <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.4.0/dist/clappr.min.js"></script>
-
-  <!-- Plugins y dependencias -->
-  <script src="https://cdn.jsdelivr.net/npm/mux.js@5.6.7/dist/mux.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clappr-pip@latest/dist/clappr-pip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/dist/clappr-playback-rate-plugin.min.js"></script>
-
-  <!-- Shaka + DASH support -->
-  <script src="https://cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
-
-  <!-- jQuery (si se necesita para algún otro script externo) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
+  <meta charset="utf-8">
+  <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@swarmcloud/hls/p2p-engine.min.js"></script>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: black;
+    body, html {margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#000;}
+    #player {position:absolute;inset:0;}
+    .media-control[data-media-control] .bar-container[data-seekbar] .bar-background[data-seekbar] {
+      height:5px !important;
     }
-    #player {
-      width: 100%;
-      height: 100vh;
-    }
-    .player-poster[data-poster] {
-      background-size: cover;
+    .media-control[data-media-control] .bar-container[data-seekbar]:hover .bar-background[data-seekbar] {
+      height:7px !important;
     }
   </style>
 </head>
 <body>
   <div id="player"></div>
-
   <script>
-    var player = new Clappr.Player({
-      source: 'https://cdn-live.mundogo.cl/espn/espn.mpd',
-      mimeType: 'application/dash+xml',
-      height: '100%',
-      width: '100%',
-      parentId: '#player',
-      plugins: [
-        LevelSelector,
-        DashShakaPlayback,
-        ChromecastPlugin,
-        ClapprPip.PipButton,
-        ClapprPip.PipPlugin,
-        Clappr.MediaControl
-      ],
-      events: {
-        onReady: function() {
-          var plugin = this.getPlugin('click_to_pause');
-          if (plugin) plugin.disable();
-        }
-      },
-      chromecast: {
-        appId: '9DFB77C0',
-        contentType: 'video/mp4'
-      },
-      shakaConfiguration: {
-        drm: {
-          clearKeys: {
-            '90671184dd82541a9d1786eaa025e345': '74f8eab46c1e43fd8f7b64c21a96fc5b',
-            'b87d7da884bd5f3496015f9c2e53c896': '4451447bdf55fe4451f4a3bf177da59a',
-            'b6989ba0aa0f5e8a817ecdfd9c385994': '75c6e6d57308f34ca482802a5e796a05'
-          }
-        },
-        preferredAudioLanguage: 'pt-BR'
-      },
-      shakaOnBeforeLoad: function(shaka_player) {
-        // Aquí puedes agregar configuraciones antes de iniciar Shaka si es necesario
-      }
-    });
+    
+    (() => {
+      const d = "aHR0cHM6Ly9hZ3Z5YnkuZnVib2hkLmNvbTo0NDMvZXNwbi9tb25vLm0zdTg/dG9rZW49MWFiZGU5NjhjYmY2ODViOWE2NGJlODg0MThjNzA1Mzk3YWMwNWQ0ZS03Mi0xNzYyNDgwNjEyLTE3NjI0NjI2MTI=";
+      const s = decodeURIComponent(escape(window.atob(d)));
+      const p2p = { live: true, trackerZone: "us" };
+      P2PEngineHls.tryRegisterServiceWorker(p2p).then(() => {
+        const pl = new Clappr.Player({
+          source: s,
+          parentId: "#player",
+          width: "100%",
+          height: "100%",
+          autoPlay: false,
+          plugins: [],
+          mediacontrol: { seekbar: "#D4ED31", buttons: "#FFFFFF" }
+        });
+        p2p.hlsjsInstance = pl.core.getCurrentPlayback()?._hls;
+        new P2PEngineHls(p2p);
+      });
+    })();
   </script>
+
 </body>
 </html>
